@@ -1,3 +1,4 @@
+import { useEditorStore } from "@/store";
 import { shapeDefinitions } from "./shapes/shape-definitions";
 import { createShape } from "./shapes/shape-factory";
 
@@ -24,7 +25,8 @@ export const initializeFabric = async (canvasEl, containerEl) => {
   }
 };
 
-export const centerCanvas = (canvas) => {
+export const centerCanvas = (canvas, showProperties = false, isEditing = false) => {
+
   if (!canvas || !canvas.wrapperEl) return;
 
   const canvasWrapper = canvas.wrapperEl;
@@ -96,55 +98,79 @@ export const addTextToCanvas = async (
   }
 };
 
-export const addImageToCanvas = async (canvas, imageUrl) => {
+export const addImageToCanvas = async (canvas, imageUrl, x, y, width, height, isFixed = false) => {
   if (!canvas) return null;
 
   try {
     const { Image: FabricImage } = await import("fabric");
 
-    let imgObj = new Image();
+    const imgObj = new Image();
     imgObj.crossOrigin = "Anonymous";
     imgObj.src = imageUrl;
 
     return new Promise((resolve, reject) => {
       imgObj.onload = () => {
         let image = new FabricImage(imgObj);
-        image.set({
+
+        // Base properties for all images
+        const baseProps = {
           id: `image-${Date.now()}`,
-          top: 100,
-          left: 100,
-          padding: 10,
-          cornorSize: 10,
-        });
+          top: y,
+          left: x,
+        };
 
-        const maxDimension = 400;
-
-        if (image.width > maxDimension || image.height > maxDimension) {
-          if (image.width > image.height) {
-            const scale = maxDimension / image.width;
-            image.scale(scale);
-          } else {
-            const scale = maxDimension / image.height;
-            image.scale(scale);
+        // Lock or keep movable based on `isFixed`
+        const interactiveProps = isFixed
+          ? {
+            selectable: false,
+            evented: false,
+            hasControls: false,
+            hasBorders: false,
+            lockMovementX: true,
+            lockMovementY: true,
+            lockScalingX: true,
+            lockScalingY: true,
+            lockRotation: true,
+            hoverCursor: 'default',
+            moveCursor: 'default',
+            perPixelTargetFind: false,
           }
+          : {
+            selectable: true,
+            evented: true,
+            hasControls: true,
+            hasBorders: true,
+            lockMovementX: false,
+            lockMovementY: false,
+            lockScalingX: false,
+            lockScalingY: false,
+            lockRotation: false,
+          };
+
+        image.set({ ...baseProps, ...interactiveProps });
+
+        // Scale if width & height are provided
+        if (width && height) {
+          const scaleX = width / image.width;
+          const scaleY = height / image.height;
+          image.scaleX = scaleX;
+          image.scaleY = scaleY;
         }
 
         canvas.add(image);
-        canvas.setActiveObject(image);
+        if (!isFixed) canvas.setActiveObject(image);
         canvas.renderAll();
         resolve(image);
       };
 
-      imgObj.onerror = () => {
-        reject(new Error("Failed to load image", imageUrl));
-      };
+      imgObj.onerror = () => reject(new Error(`Failed to load image: ${imageUrl}`));
     });
   } catch (error) {
-    console.error("Error adding image");
-
+    console.error("Error adding image", error);
     return null;
   }
 };
+
 
 export const toggleDrawingMode = (
   canvas,

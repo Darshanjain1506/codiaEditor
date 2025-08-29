@@ -76,17 +76,9 @@ function Header() {
   };
 
   return (
-    <header className="header-gradient header flex items-center justify-between px-4 h-14">
-      <div className="flex items-center space-x-2">
-        <Link href={"/"}>
-          <Image
-            src="https://static.canva.com/web/images/856bac30504ecac8dbd38dbee61de1f1.svg"
-            alt="canva"
-            width={70}
-            height={30}
-            priority
-          />
-        </Link>
+    <header className="header-gradient header flex items-center justify-end px-4 h-14">
+      <div className="flex items-center  space-x-2">
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild="true">
             <button className="header-button flex items-center text-white">
@@ -135,49 +127,8 @@ function Header() {
           <Download className="w-5 h-5" />
         </button>
       </div>
-      <div className="flex-1 flex justify-center max-w-md">
-        <Input
-          className="w-full"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
-      <div className="flex items-center space-x-3">
-        <button
-          onClick={() => setShowPremiumModal(true)}
-          className="upgrade-button flex items-center bg-white/10 hover:bg-white/20 text-white rounded-md h-9 px-3 transition-colors"
-        >
-          <Star className="mr-1 h-4 w-4 text-yellow-400" />
-          <span>
-            {!userSubscription?.isPremium
-              ? "Upgrade To Premium"
-              : "Premium Member"}
-          </span>
-        </button>
-        <DropdownMenu>
-          <DropdownMenuTrigger aschild="true">
-            <div className="flex items-center space-x-2 ">
-              <Avatar>
-                <AvatarFallback>
-                  {/* {session?.user?.name?.[0] || "U"} */}
-                </AvatarFallback>
-                <AvatarImage
-                // src={session?.user?.image || "/placeholder-user.jpg"}
-                />
-              </Avatar>
-            </div>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuItem
-              onClick={handleLogout}
-              className={"cursor-pointer"}
-            >
-              <LogOut className="mr-2 w-4 h-4" />
-              <span className="font-bold">Log out</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+
+
       <ExportModal isOpen={showExportModal} onClose={setShowExportModal} />
     </header>
   );

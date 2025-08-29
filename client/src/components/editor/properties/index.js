@@ -165,7 +165,7 @@ function Properties() {
       }
     };
 
-    const handleSelectionCleared = () => {};
+    const handleSelectionCleared = () => { };
 
     const activeObject = canvas.getActiveObject();
     if (activeObject) {

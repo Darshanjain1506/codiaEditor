@@ -116,6 +116,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -123,7 +124,11 @@
 
 /* Header gradient background */
 .header-gradient {
-  background: linear-gradient(90deg, #0099ff 0%, #4c6fff 100%);
+
+  background: linear-gradient(to bottom right, #FF512F, #DD2476);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* Sidebar styles */
@@ -170,10 +175,12 @@
 
 /* Secondary panel */
 .secondary-panel {
-  height: 100%;
+  margin-left: 64px;
+  position: absolute;
+  height: 90%;
   background-color: white;
   border-right: 1px solid #e6e6e6;
-  position: relative;
+  /* position: relative; */
   transition: width 0.3s ease, opacity 0.3s ease;
   z-index: 5;
 }
@@ -248,7 +255,8 @@
 
 /* Panel content */
 .panel-content {
-  height: calc(100% - 110px); /* Adjust based on header + search height */
+  height: calc(100% - 110px);
+  /* Adjust based on header + search height */
   overflow-y: auto;
 }
 
@@ -279,8 +287,10 @@
 .hover-panel {
   position: fixed;
   left: 64px;
-  top: 56px; /* Height of the header */
-  bottom: 48px; /* Height of the bottom bar */
+  top: 56px;
+  /* Height of the header */
+  bottom: 48px;
+  /* Height of the bottom bar */
   width: 280px;
   background: white;
   border-radius: 8px;
@@ -291,7 +301,8 @@
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 100;
-  overflow-y: auto; /* Allow scrolling if content is too tall */
+  overflow-y: auto;
+  /* Allow scrolling if content is too tall */
 }
 
 /* Show panel on hover */

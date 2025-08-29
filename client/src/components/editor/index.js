@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useEditorStore } from "@/store";
 import { getUserDesignByID } from "@/services/design-service";
 import Properties from "./properties";
-import { addImageToCanvas, addTextToCanvas } from "@/fabric/fabric-utils";
+import { addImageToCanvas, addTextToCanvas, centerCanvas } from "@/fabric/fabric-utils";
 import { rgbToHex } from "@/lib/utils";
 
 
@@ -71,11 +71,10 @@ function MainEditor() {
   //load the design ->
   const loadDesign = useCallback(async () => {
     if (!canvas || loadAttempted) return;
-
     try {
       setIsLoading(true);
       setLoadAttempted(true);
-
+      const scaleFactor = 2;
       // Fetch data from your API (change URL/service if needed)
       const response = await getUserDesignByID(designId);
       const data = response.data;
@@ -92,31 +91,29 @@ function MainEditor() {
       const height = visualElement?.styleConfig?.heightSpec?.value // Use height if available
       console.log(canvas, "canvas in load design", width, height);
 
-      canvas.setHeight(height);
-      canvas.setWidth(width);
+      canvas.setHeight(height / scaleFactor);
+      canvas.setWidth(width / scaleFactor);
       canvas.renderAll();
       // 2. Set background color
       const bgColor = visualElement?.styleConfig?.backgroundSpec?.backgroundColor;
       const hex = rgbToHex(...bgColor.rgb);
       canvas.backgroundColor = hex;
       // 3. Iterate through elements
-      for (const element of visualElement.childElements) {
+      for (const element of visualElement?.childElements) {
         const { elementType, layoutConfig, styleConfig, contentData } = element;
         const [x, y] = layoutConfig?.absoluteAttrs?.coord || [0, 0];
+        const width = styleConfig?.widthSpec?.value || null;
+        const height = styleConfig?.heightSpec?.value || null;
 
         if (elementType === "Image") {
-          await new Promise((resolve) => {
-
-            addImageToCanvas(canvas, contentData.imageSource).then(() => resolve());
-
-          });
+          await addImageToCanvas(canvas, contentData?.imageSource, x / scaleFactor, y / scaleFactor, width / scaleFactor, height / scaleFactor, false);
         }
 
         if (elementType === "Text") {
-          addTextToCanvas(canvas, contentData.textValue || "Sample Text", {
-            left: x,
-            top: y,
-            fontSize: styleConfig?.textConfig?.fontSize || 20,
+          addTextToCanvas(canvas, contentData?.textValue || "Sample Text", {
+            left: x / scaleFactor,
+            top: y / scaleFactor,
+            fontSize: styleConfig?.textConfig?.fontSize / scaleFactor || 20,
             fontFamily: styleConfig?.textConfig?.fontFamily || "Arial",
             fill: styleConfig?.textColor
               ? `rgb(${styleConfig.textColor.rgbValues.join(",")})`
@@ -136,11 +133,86 @@ function MainEditor() {
     }
   }, [canvas, designId, loadAttempted]);
 
+  // const loadDesign = useCallback(async () => {
+  //   if (!canvas || loadAttempted) return;
+  //   try {
+  //     setIsLoading(true);
+  //     setLoadAttempted(true);
+
+  //     const response = await getUserDesignByID(designId);
+  //     const design = response.data;
+  //     console.log(design, "sdfsdf");
+
+  //     if (design) {
+  //       //update name
+  //       setName(design?.name);
+
+  //       //set the design ID just incase after getting the data
+  //       setDesignId(designId);
+
+  //       try {
+  //         if (design.canvasData) {
+  //           canvas.clear();
+  //           if (design.width && design.height) {
+  //             canvas.setDimensions({
+  //               width: design.width,
+  //               height: design.height,
+  //             });
+  //           }
+
+  //           const canvasData =
+  //             typeof design.canvasData === "string"
+  //               ? JSON.parse(design.canvasData)
+  //               : design.canvasData;
+
+  //           const hasObjects =
+  //             canvasData.objects && canvasData.objects.length > 0;
+
+  //           if (canvasData.background) {
+  //             canvas.backgroundColor = canvasData.background;
+  //           } else {
+  //             canvas.backgroundColor = "#ffffff";
+  //           }
+
+  //           if (!hasObjects) {
+  //             canvas.renderAll();
+  //             return true;
+  //           }
+
+  //           canvas
+  //             .loadFromJSON(design.canvasData)
+  //             .then((canvas) => canvas.requestRenderAll());
+  //         } else {
+  //           console.log("no canvas data");
+  //           canvas.clear();
+  //           canvas.setWidth(design.width);
+  //           canvas.setHeight(design.height);
+  //           canvas.backgroundColor = "#ffffff";
+  //           canvas.renderAll();
+  //         }
+  //       } catch (e) {
+  //         console.error(("Error loading canvas", e));
+  //         setError("Error loading canvas");
+  //       } finally {
+  //         setIsLoading(false);
+  //       }
+  //     }
+
+  //     console.log(response);
+  //   } catch (e) {
+  //     console.error("Failed to load design", e);
+  //     setError("failed to load design");
+  //     setIsLoading(false);
+  //   }
+  // }, [canvas, loadAttempted, setDesignId]);
+
+
+
 
   useEffect(() => {
     setTimeout(() => {
       loadDesign()
-    }, 500)
+    }, 100)
 
     // if (!designId) {
     //   setTimeout(() => {
@@ -156,6 +228,10 @@ function MainEditor() {
 
     // }
   }, [canvas, designId, loadAttempted, router]);
+
+  // useEffect(() => {
+  //   centerCanvas(canvas, showProperties, isEditing);
+  // }, [canvas, showProperties, isEditing])
 
   useEffect(() => {
     if (!canvas) return;

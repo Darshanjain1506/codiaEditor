@@ -81,15 +81,14 @@ function Sidebar() {
   const activeItem = sidebarItems.find((item) => item.id === activeSidebar);
 
   return (
-    <div className="flex h-full">
-      <aside className="sidebar">
+    <div className="flex   h-full">
+      <aside className="sidebar ">
         {sidebarItems.map((item) => (
           <div
             onClick={() => handleItemClick(item.id)}
             key={item.id}
-            className={`sidebar-item ${
-              activeSidebar === item.id ? "active" : ""
-            }`}
+            className={`sidebar-item ${activeSidebar === item.id ? "active" : ""
+              }`}
           >
             <item.icon className="sidebar-item-icon h-5 w-5" />
             <span className="sidebar-item-label">{item.label}</span>
@@ -98,7 +97,7 @@ function Sidebar() {
       </aside>
       {activeSidebar && (
         <div
-          className={`secondary-panel ${isPanelCollapsed ? "collapsed" : ""}`}
+          className={`secondary-panel ${isPanelCollapsed ? "collapsed" : ""} `}
           style={{
             width: isPanelCollapsed ? "0" : "320px",
             opacity: isPanelCollapsed ? 0 : 1,
