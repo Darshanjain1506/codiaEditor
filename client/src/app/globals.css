@@ -125,7 +125,7 @@
 /* Header gradient background */
 .header-gradient {
 
-  background: linear-gradient(to bottom right, #FF512F, #DD2476);
+  background: linear-gradient(90deg, rgba(24, 204, 99, 1) 0%, rgba(20, 150, 74, 1) 100%, rgba(242, 218, 0, 1) 37%);
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 

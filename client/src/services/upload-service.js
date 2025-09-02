@@ -2,14 +2,12 @@ import axios from "axios";
 import { getSession } from "next-auth/react";
 import { fetchWithAuth } from "./base-service";
 
-const API_URL = process.env.API_URL || "http://localhost:5000";
+const API_URL = "https://cyringe.dwebbox.com/api/v1";
 
 export async function uploadFileWithAuth(file, metaData = {}) {
-  const session = await getSession();
 
-  if (!session) {
-    throw new Error("Not authenticated");
-  }
+
+
 
   const formData = new FormData();
   formData.append("file", file);
@@ -19,9 +17,9 @@ export async function uploadFileWithAuth(file, metaData = {}) {
   });
 
   try {
-    const response = await axios.post(`${API_URL}/v1/media/upload`, formData, {
+    const response = await axios.post(`${API_URL}/files/upload`, formData, {
       headers: {
-        Authorization: `Bearer ${session.idToken}`,
+        Authorization: ``,
         "Content-Type": "multipart/form-data",
       },
     });

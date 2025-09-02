@@ -70,8 +70,8 @@ export async function getUserDesignByID(designId) {
         },
         "childElements": [
           {
-            "elementId": "Background_0_0_1024_1024_1",
-            "elementName": "Background",
+            "elementId": "ImageView_0_0_1024_1024_1",
+            "elementName": "Image",
             "elementType": "Image",
             "layoutConfig": {
               "positionMode": "Absolute",
@@ -106,132 +106,12 @@ export async function getUserDesignByID(designId) {
               "textContainerized": false
             },
             "contentData": {
-              "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-08-25/c2fe9371-775a-45bb-abdf-031632e7b2e6/out/20250825140950021273_9c7d3c5e688e429499bc40f463baabe5/20250825140955-image_c2fe9371-775a-45bb-abdf-031632e7b2e6.png"
+              "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-09-01/ae5deca2-75af-4c8b-a457-cc1a48914005/out/20250901210910910947_0915749cc75a46f09a466fcd11d90306/20250901210916-image_ae5deca2-75af-4c8b-a457-cc1a48914005.png"
             }
           },
           {
-            "elementId": "ImageView_29_306_981_716_2",
-            "elementName": "Image",
-            "elementType": "Image",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  29,
-                  306
-                ],
-                "orginCoord": [
-                  29,
-                  306
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 981
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 716
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 702396,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-08-25/8cd2e0e3-315c-45e0-9d54-778e92232e35/out/20250825140950021273_9c7d3c5e688e429499bc40f463baabe5/20250825140955-image_8cd2e0e3-315c-45e0-9d54-778e92232e35.png"
-            }
-          },
-          {
-            "elementId": "ImageView_50_45_943_955_3",
-            "elementName": "Image",
-            "elementType": "Image",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  50,
-                  45
-                ],
-                "orginCoord": [
-                  50,
-                  45
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 943
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 955
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 900565,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-08-25/bd998754-9066-464c-90b3-8f7433d621c6/out/20250825140950021273_9c7d3c5e688e429499bc40f463baabe5/20250825140955-image_bd998754-9066-464c-90b3-8f7433d621c6.png"
-            }
-          },
-          {
-            "elementId": "ImageView_74_311_799_704_4",
-            "elementName": "Image",
-            "elementType": "Image",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  74,
-                  311
-                ],
-                "orginCoord": [
-                  74,
-                  311
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 799
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 704
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 562496,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-08-25/3aa24f24-3012-4205-98b6-0facb1d3763b/out/20250825140950021273_9c7d3c5e688e429499bc40f463baabe5/20250825140955-image_3aa24f24-3012-4205-98b6-0facb1d3763b.png"
-            }
-          },
-          {
-            "elementId": "Button_670_860_302_117_5",
-            "elementName": "Button",
+            "elementId": "ViewGroup_0_339_1024_685_2",
+            "elementName": "Groups",
             "elementType": "Layer",
             "layoutConfig": {
               "positionMode": "Absolute",
@@ -241,34 +121,706 @@ export async function getUserDesignByID(designId) {
                   "TOP"
                 ],
                 "coord": [
-                  670,
-                  860
+                  0,
+                  339
                 ],
                 "orginCoord": [
-                  670,
-                  860
+                  0,
+                  339
                 ]
               }
             },
             "styleConfig": {
               "widthSpec": {
                 "sizing": "FIXED",
-                "value": 302
+                "value": 1024
               },
               "heightSpec": {
                 "sizing": "FIXED",
-                "value": 117
+                "value": 685
               }
             },
             "processingMeta": {
-              "surfaceArea": 35334,
+              "surfaceArea": 701440,
               "detectionScore": 0,
               "textContainerized": false
             },
             "childElements": [
               {
-                "elementId": "bg_Button_670_860_302_117_6",
-                "elementName": "Background",
+                "elementId": "ViewGroup_0_891_1024_132_3",
+                "elementName": "Groups",
+                "elementType": "Layer",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      0,
+                      552
+                    ],
+                    "orginCoord": [
+                      0,
+                      891
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 1024
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 132
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 135168,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "childElements": [
+                  {
+                    "elementId": "Background_0_891_1024_132_4",
+                    "elementName": "Background",
+                    "elementType": "Image",
+                    "layoutConfig": {
+                      "positionMode": "Absolute",
+                      "absoluteAttrs": {
+                        "align": [
+                          "LEFT",
+                          "TOP"
+                        ],
+                        "coord": [
+                          0,
+                          0
+                        ],
+                        "orginCoord": [
+                          0,
+                          891
+                        ]
+                      }
+                    },
+                    "styleConfig": {
+                      "widthSpec": {
+                        "sizing": "FIXED",
+                        "value": 1024
+                      },
+                      "heightSpec": {
+                        "sizing": "FIXED",
+                        "value": 132
+                      }
+                    },
+                    "processingMeta": {
+                      "surfaceArea": 135168,
+                      "detectionScore": 0,
+                      "textContainerized": false
+                    },
+                    "contentData": {
+                      "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-09-01/4089967e-4921-48c5-86eb-8cd5e4cae6fb/out/20250901210910910947_0915749cc75a46f09a466fcd11d90306/20250901210916-image_4089967e-4921-48c5-86eb-8cd5e4cae6fb.png"
+                    }
+                  },
+                  {
+                    "elementId": "TextView_818_967_164_29_5",
+                    "elementName": "12-25 lakhs",
+                    "elementType": "Text",
+                    "layoutConfig": {
+                      "positionMode": "Absolute",
+                      "absoluteAttrs": {
+                        "align": [
+                          "LEFT",
+                          "TOP"
+                        ],
+                        "coord": [
+                          823,
+                          76
+                        ],
+                        "orginCoord": [
+                          823,
+                          967
+                        ]
+                      }
+                    },
+                    "styleConfig": {
+                      "widthSpec": {
+                        "sizing": "FIXED",
+                        "value": 159
+                      },
+                      "heightSpec": {
+                        "sizing": "FIXED",
+                        "value": 29
+                      },
+                      "textConfig": {
+                        "fontFamily": "Inter",
+                        "fontFamilyRec": "Inter",
+                        "fontScoreRec": 0.9737410226371139,
+                        "fontSize": 27,
+                        "fontStyle": "bold",
+                        "fontStyleRec": "Bold",
+                        "textAlign": [
+                          "LEFT",
+                          "CENTER"
+                        ]
+                      },
+                      "textColor": {
+                        "rgbValues": [
+                          249,
+                          217,
+                          218
+                        ]
+                      },
+                      "opacityLevel": 255,
+                      "rotationAngle": 0,
+                      "textExtraction": {
+                        "rows_text_position": [
+                          [
+                            {
+                              "binary": null,
+                              "binary_height": 26,
+                              "index": 93,
+                              "lang": "en",
+                              "ocr_box": [
+                                [
+                                  818,
+                                  967
+                                ],
+                                [
+                                  982,
+                                  967
+                                ],
+                                [
+                                  982,
+                                  996
+                                ],
+                                [
+                                  818,
+                                  996
+                                ]
+                              ],
+                              "parent_index": null,
+                              "rec_score": 0.9685409069061279,
+                              "single_box": true,
+                              "style": null,
+                              "text": "12-25 lakhs",
+                              "text_font_list": [
+                                {
+                                  "class_id": 1148,
+                                  "label": "News Cycle-Bold",
+                                  "probability": 0.5166612267494202
+                                },
+                                {
+                                  "class_id": 123,
+                                  "label": "Arial Narrow-Bold",
+                                  "probability": 0.26349368691444397
+                                },
+                                {
+                                  "class_id": 114,
+                                  "label": "Archivo Narrow-Bold",
+                                  "probability": 0.12489508837461472
+                                },
+                                {
+                                  "class_id": 1712,
+                                  "label": "Stick No Bills-Bold",
+                                  "probability": 0.05331164225935936
+                                },
+                                {
+                                  "class_id": 1630,
+                                  "label": "Smooch Sans-Bold",
+                                  "probability": 0.006593246478587389
+                                },
+                                {
+                                  "class_id": 1459,
+                                  "label": "Roboto-Bold",
+                                  "probability": 0.004805571865290403
+                                },
+                                {
+                                  "class_id": 1346,
+                                  "label": "Pragati Narrow-Bold",
+                                  "probability": 0.004621068015694618
+                                },
+                                {
+                                  "class_id": 643,
+                                  "label": "Freeman-Regular",
+                                  "probability": 0.00323684373870492
+                                },
+                                {
+                                  "class_id": 1652,
+                                  "label": "Sofia Sans Semi Condensed-Bold",
+                                  "probability": 0.0031402839813381433
+                                },
+                                {
+                                  "class_id": 1328,
+                                  "label": "Plus Jakarta Sans-Bold",
+                                  "probability": 0.002812454476952553
+                                }
+                              ],
+                              "text_is_container": false,
+                              "under_line": false
+                            }
+                          ]
+                        ],
+                        "single_height": 27,
+                        "text_box_height": 27,
+                        "text_entity_list_index": 7,
+                        "text_font_width": 164,
+                        "text_lang": "en"
+                      }
+                    },
+                    "processingMeta": {
+                      "surfaceArea": 4756,
+                      "detectionScore": 0,
+                      "textContainerized": false
+                    },
+                    "contentData": {
+                      "textValue": "12-25 lakhs"
+                    }
+                  },
+                  {
+                    "elementId": "TextView_808_915_177_50_6",
+                    "elementName": "12-25-25",
+                    "elementType": "Text",
+                    "layoutConfig": {
+                      "positionMode": "Absolute",
+                      "absoluteAttrs": {
+                        "align": [
+                          "LEFT",
+                          "TOP"
+                        ],
+                        "coord": [
+                          810,
+                          24
+                        ],
+                        "orginCoord": [
+                          810,
+                          915
+                        ]
+                      }
+                    },
+                    "styleConfig": {
+                      "widthSpec": {
+                        "sizing": "FIXED",
+                        "value": 175
+                      },
+                      "heightSpec": {
+                        "sizing": "FIXED",
+                        "value": 50
+                      },
+                      "textConfig": {
+                        "fontFamily": "Inter",
+                        "fontFamilyRec": null,
+                        "fontScoreRec": null,
+                        "fontSize": 41,
+                        "fontStyle": "bold",
+                        "fontStyleRec": null,
+                        "textAlign": [
+                          "LEFT",
+                          "CENTER"
+                        ]
+                      },
+                      "textColor": {
+                        "rgbValues": [
+                          248,
+                          223,
+                          223
+                        ]
+                      },
+                      "opacityLevel": 255,
+                      "rotationAngle": 0,
+                      "textExtraction": {
+                        "rows_text_position": [
+                          [
+                            {
+                              "binary": null,
+                              "binary_height": 40,
+                              "index": 90,
+                              "lang": "en",
+                              "ocr_box": [
+                                [
+                                  808,
+                                  915
+                                ],
+                                [
+                                  985,
+                                  915
+                                ],
+                                [
+                                  985,
+                                  965
+                                ],
+                                [
+                                  808,
+                                  965
+                                ]
+                              ],
+                              "parent_index": null,
+                              "rec_score": 0.9997650384902954,
+                              "single_box": true,
+                              "style": null,
+                              "text": "12-25-25",
+                              "text_font_list": [
+                                {
+                                  "class_id": 643,
+                                  "label": "Freeman-Regular",
+                                  "probability": 0.44591018557548523
+                                },
+                                {
+                                  "class_id": 1461,
+                                  "label": "Roboto Condensed-Bold",
+                                  "probability": 0.4065886437892914
+                                },
+                                {
+                                  "class_id": 1346,
+                                  "label": "Pragati Narrow-Bold",
+                                  "probability": 0.07609601318836212
+                                },
+                                {
+                                  "class_id": 1441,
+                                  "label": "Reddit Sans Condensed-Bold",
+                                  "probability": 0.025844678282737732
+                                },
+                                {
+                                  "class_id": 208,
+                                  "label": "Barlow Semi Condensed-Bold",
+                                  "probability": 0.020000247284770012
+                                },
+                                {
+                                  "class_id": 1275,
+                                  "label": "Pathway Extreme-Bold",
+                                  "probability": 0.005794223863631487
+                                },
+                                {
+                                  "class_id": 1439,
+                                  "label": "Reddit Sans-Bold",
+                                  "probability": 0.0017960029654204845
+                                },
+                                {
+                                  "class_id": 114,
+                                  "label": "Archivo Narrow-Bold",
+                                  "probability": 0.0017561411950737238
+                                },
+                                {
+                                  "class_id": 1712,
+                                  "label": "Stick No Bills-Bold",
+                                  "probability": 0.0017348076216876507
+                                },
+                                {
+                                  "class_id": 556,
+                                  "label": "Epilogue-Bold",
+                                  "probability": 0.0014717280864715576
+                                }
+                              ],
+                              "text_is_container": false,
+                              "under_line": false
+                            }
+                          ]
+                        ],
+                        "single_height": 41,
+                        "text_box_height": 41,
+                        "text_entity_list_index": 4,
+                        "text_font_width": 177,
+                        "text_lang": "en"
+                      }
+                    },
+                    "processingMeta": {
+                      "surfaceArea": 8850,
+                      "detectionScore": 0,
+                      "textContainerized": false
+                    },
+                    "contentData": {
+                      "textValue": "12-25-25"
+                    }
+                  },
+                  {
+                    "elementId": "ImageView_775_920_30_47_7",
+                    "elementName": "Image",
+                    "elementType": "Image",
+                    "layoutConfig": {
+                      "positionMode": "Absolute",
+                      "absoluteAttrs": {
+                        "align": [
+                          "LEFT",
+                          "TOP"
+                        ],
+                        "coord": [
+                          780,
+                          35
+                        ],
+                        "orginCoord": [
+                          780,
+                          926
+                        ]
+                      }
+                    },
+                    "styleConfig": {
+                      "widthSpec": {
+                        "sizing": "FIXED",
+                        "value": 23
+                      },
+                      "heightSpec": {
+                        "sizing": "FIXED",
+                        "value": 36
+                      }
+                    },
+                    "processingMeta": {
+                      "surfaceArea": 1410,
+                      "detectionScore": 0,
+                      "textContainerized": false
+                    },
+                    "contentData": {
+                      "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-09-01/c4b7bb86-9bf1-4c4d-bd0e-ebcea81d4903/out/20250901210910910947_0915749cc75a46f09a466fcd11d90306/20250901210916-image_c4b7bb86-9bf1-4c4d-bd0e-ebcea81d4903.png"
+                    }
+                  },
+                  {
+                    "elementId": "TextView_30_921_657_86_8",
+                    "elementName": "To make this wor",
+                    "elementType": "Text",
+                    "layoutConfig": {
+                      "positionMode": "Absolute",
+                      "absoluteAttrs": {
+                        "align": [
+                          "LEFT",
+                          "TOP"
+                        ],
+                        "coord": [
+                          36,
+                          30
+                        ],
+                        "orginCoord": [
+                          36,
+                          921
+                        ]
+                      }
+                    },
+                    "styleConfig": {
+                      "widthSpec": {
+                        "sizing": "FIXED",
+                        "value": 651
+                      },
+                      "heightSpec": {
+                        "sizing": "FIXED",
+                        "value": 86
+                      },
+                      "textConfig": {
+                        "fontFamily": "Inter",
+                        "fontFamilyRec": "Inter",
+                        "fontScoreRec": 0.9718738275114447,
+                        "fontSize": 37,
+                        "fontStyle": "semi_bold",
+                        "fontStyleRec": "Bold",
+                        "textAlign": [
+                          "LEFT",
+                          "CENTER"
+                        ]
+                      },
+                      "textColor": {
+                        "rgbValues": [
+                          242,
+                          201,
+                          202
+                        ]
+                      },
+                      "opacityLevel": 255,
+                      "rotationAngle": 0,
+                      "textExtraction": {
+                        "rows_text_position": [
+                          [
+                            {
+                              "binary": null,
+                              "binary_height": 41,
+                              "index": 78,
+                              "lang": "en",
+                              "ocr_box": [
+                                [
+                                  30,
+                                  921
+                                ],
+                                [
+                                  685,
+                                  921
+                                ],
+                                [
+                                  685,
+                                  969
+                                ],
+                                [
+                                  30,
+                                  969
+                                ]
+                              ],
+                              "parent_index": null,
+                              "rec_score": 0.9973362684249878,
+                              "single_box": true,
+                              "style": null,
+                              "text": "To make this world a fashionabeplace by",
+                              "text_font_list": [
+                                {
+                                  "class_id": 1148,
+                                  "label": "News Cycle-Bold",
+                                  "probability": 0.477922648191452
+                                },
+                                {
+                                  "class_id": 310,
+                                  "label": "Cabin-Regular",
+                                  "probability": 0.3129132390022278
+                                },
+                                {
+                                  "class_id": 1077,
+                                  "label": "Microsoft Sans Serif-Regular",
+                                  "probability": 0.08055083453655243
+                                },
+                                {
+                                  "class_id": 118,
+                                  "label": "Archivo-Regular",
+                                  "probability": 0.06300225108861923
+                                },
+                                {
+                                  "class_id": 125,
+                                  "label": "Arial Narrow-Regular",
+                                  "probability": 0.020042752847075462
+                                },
+                                {
+                                  "class_id": 1465,
+                                  "label": "Roboto Flex-Regular",
+                                  "probability": 0.00810907781124115
+                                },
+                                {
+                                  "class_id": 1713,
+                                  "label": "Stick No Bills-Regular",
+                                  "probability": 0.0034183303359895945
+                                },
+                                {
+                                  "class_id": 1149,
+                                  "label": "News Cycle-Regular",
+                                  "probability": 0.0023049330338835716
+                                },
+                                {
+                                  "class_id": 126,
+                                  "label": "Arial-Regular",
+                                  "probability": 0.0018832571804523468
+                                },
+                                {
+                                  "class_id": 802,
+                                  "label": "Instrument Sans-Regular",
+                                  "probability": 0.0017265034839510918
+                                }
+                              ],
+                              "text_is_container": false,
+                              "under_line": false
+                            }
+                          ],
+                          [
+                            {
+                              "binary": null,
+                              "binary_height": 37,
+                              "index": 79,
+                              "lang": "en",
+                              "ocr_box": [
+                                [
+                                  31,
+                                  960
+                                ],
+                                [
+                                  449,
+                                  960
+                                ],
+                                [
+                                  449,
+                                  1007
+                                ],
+                                [
+                                  31,
+                                  1007
+                                ]
+                              ],
+                              "parent_index": null,
+                              "rec_score": 0.9989235401153564,
+                              "single_box": true,
+                              "style": null,
+                              "text": "making fashion affordable.",
+                              "text_font_list": [
+                                {
+                                  "class_id": 1148,
+                                  "label": "News Cycle-Bold",
+                                  "probability": 0.785298228263855
+                                },
+                                {
+                                  "class_id": 118,
+                                  "label": "Archivo-Regular",
+                                  "probability": 0.09306265413761139
+                                },
+                                {
+                                  "class_id": 125,
+                                  "label": "Arial Narrow-Regular",
+                                  "probability": 0.01769403927028179
+                                },
+                                {
+                                  "class_id": 1222,
+                                  "label": "Oregano-Regular",
+                                  "probability": 0.007870769128203392
+                                },
+                                {
+                                  "class_id": 1370,
+                                  "label": "Puritan-Regular",
+                                  "probability": 0.0065463329665362835
+                                },
+                                {
+                                  "class_id": 1713,
+                                  "label": "Stick No Bills-Regular",
+                                  "probability": 0.005906743463128805
+                                },
+                                {
+                                  "class_id": 634,
+                                  "label": "Fragment Mono-Regular",
+                                  "probability": 0.005224049091339111
+                                },
+                                {
+                                  "class_id": 802,
+                                  "label": "Instrument Sans-Regular",
+                                  "probability": 0.004340469371527433
+                                },
+                                {
+                                  "class_id": 1789,
+                                  "label": "Trocchi-Regular",
+                                  "probability": 0.003933004569262266
+                                },
+                                {
+                                  "class_id": 310,
+                                  "label": "Cabin-Regular",
+                                  "probability": 0.003390831872820854
+                                }
+                              ],
+                              "text_is_container": false,
+                              "under_line": false
+                            }
+                          ]
+                        ],
+                        "single_height": 37,
+                        "text_box_height": 86,
+                        "text_entity_list_index": 0,
+                        "text_font_width": 655,
+                        "text_lang": "en"
+                      }
+                    },
+                    "processingMeta": {
+                      "surfaceArea": 56502,
+                      "detectionScore": 0,
+                      "textContainerized": false
+                    },
+                    "contentData": {
+                      "textValue": "To make this world a fashionabeplace by\nmaking fashion affordable."
+                    }
+                  }
+                ],
+                "contentData": {
+                  "imageSource": ""
+                }
+              },
+              {
+                "elementId": "ImageView_32_338_991_553_9",
+                "elementName": "Image",
                 "elementType": "Image",
                 "layoutConfig": {
                   "positionMode": "Absolute",
@@ -278,61 +830,79 @@ export async function getUserDesignByID(designId) {
                       "TOP"
                     ],
                     "coord": [
-                      5,
-                      3
+                      32,
+                      -1
                     ],
                     "orginCoord": [
-                      675,
-                      863
+                      32,
+                      338
                     ]
                   }
                 },
                 "styleConfig": {
                   "widthSpec": {
                     "sizing": "FIXED",
-                    "value": 294
+                    "value": 991
                   },
                   "heightSpec": {
                     "sizing": "FIXED",
-                    "value": 110
-                  },
-                  "borderConfig": {
-                    "borderColor": {
-                      "rgbValues": [
-                        189,
-                        151,
-                        112
-                      ]
-                    },
-                    "borderRadius": [
-                      48,
-                      48,
-                      48,
-                      48
-                    ],
-                    "borderWidth": 1
-                  },
-                  "textColor": {
-                    "rgbValues": [
-                      235,
-                      227,
-                      177
-                    ]
-                  },
-                  "opacityLevel": 255
+                    "value": 553
+                  }
                 },
                 "processingMeta": {
-                  "surfaceArea": 35334,
+                  "surfaceArea": 548023,
                   "detectionScore": 0,
                   "textContainerized": false
                 },
                 "contentData": {
-                  "imageSource": ""
+                  "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-09-01/9fcca590-9390-4a34-9529-6c6fe9a43ee1/out/20250901210910910947_0915749cc75a46f09a466fcd11d90306/20250901210916-image_9fcca590-9390-4a34-9529-6c6fe9a43ee1.png"
                 }
+              }
+            ],
+            "contentData": {
+              "imageSource": ""
+            }
+          },
+          {
+            "elementId": "ViewGroup_0_0_1024_338_10",
+            "elementName": "Groups",
+            "elementType": "Layer",
+            "layoutConfig": {
+              "positionMode": "Absolute",
+              "absoluteAttrs": {
+                "align": [
+                  "LEFT",
+                  "TOP"
+                ],
+                "coord": [
+                  0,
+                  0
+                ],
+                "orginCoord": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "styleConfig": {
+              "widthSpec": {
+                "sizing": "FIXED",
+                "value": 1024
               },
+              "heightSpec": {
+                "sizing": "FIXED",
+                "value": 338
+              }
+            },
+            "processingMeta": {
+              "surfaceArea": 346112,
+              "detectionScore": 0,
+              "textContainerized": false
+            },
+            "childElements": [
               {
-                "elementId": "TextView_729_885_188_66_7",
-                "elementName": "₹999",
+                "elementId": "TextView_428_275_284_33_11",
+                "elementName": "by trained profe",
                 "elementType": "Text",
                 "layoutConfig": {
                   "positionMode": "Absolute",
@@ -342,30 +912,185 @@ export async function getUserDesignByID(designId) {
                       "TOP"
                     ],
                     "coord": [
-                      66,
-                      25
+                      434,
+                      275
                     ],
                     "orginCoord": [
-                      736,
-                      885
+                      434,
+                      275
                     ]
                   }
                 },
                 "styleConfig": {
                   "widthSpec": {
                     "sizing": "FIXED",
-                    "value": 181
+                    "value": 278
                   },
                   "heightSpec": {
                     "sizing": "FIXED",
-                    "value": 66
+                    "value": 33
                   },
                   "textConfig": {
                     "fontFamily": "Inter",
                     "fontFamilyRec": "Inter",
-                    "fontScoreRec": 0.9908781864796765,
-                    "fontSize": 54,
-                    "fontStyle": "bold",
+                    "fontScoreRec": 0.9995450506066845,
+                    "fontSize": 29,
+                    "fontStyle": "regular",
+                    "fontStyleRec": "Regular",
+                    "textAlign": [
+                      "LEFT",
+                      "CENTER"
+                    ]
+                  },
+                  "textColor": {
+                    "rgbValues": [
+                      58,
+                      58,
+                      58
+                    ]
+                  },
+                  "opacityLevel": 255,
+                  "rotationAngle": 0,
+                  "textExtraction": {
+                    "rows_text_position": [
+                      [
+                        {
+                          "binary": null,
+                          "binary_height": 28,
+                          "index": 89,
+                          "lang": "en",
+                          "ocr_box": [
+                            [
+                              428,
+                              275
+                            ],
+                            [
+                              712,
+                              275
+                            ],
+                            [
+                              712,
+                              308
+                            ],
+                            [
+                              428,
+                              308
+                            ]
+                          ],
+                          "parent_index": null,
+                          "rec_score": 0.9858381152153015,
+                          "single_box": true,
+                          "style": null,
+                          "text": "by trained professionals",
+                          "text_font_list": [
+                            {
+                              "class_id": 802,
+                              "label": "Instrument Sans-Regular",
+                              "probability": 0.6915324926376343
+                            },
+                            {
+                              "class_id": 1149,
+                              "label": "News Cycle-Regular",
+                              "probability": 0.29079684615135193
+                            },
+                            {
+                              "class_id": 125,
+                              "label": "Arial Narrow-Regular",
+                              "probability": 0.016109799966216087
+                            },
+                            {
+                              "class_id": 1713,
+                              "label": "Stick No Bills-Regular",
+                              "probability": 0.0006005952600389719
+                            },
+                            {
+                              "class_id": 552,
+                              "label": "Englebert-Regular",
+                              "probability": 0.0003236040356568992
+                            },
+                            {
+                              "class_id": 667,
+                              "label": "Geneva-Regular",
+                              "probability": 0.0001228200417244807
+                            },
+                            {
+                              "class_id": 693,
+                              "label": "Glass Antiqua-Regular",
+                              "probability": 0.000059398345911176875
+                            },
+                            {
+                              "class_id": 559,
+                              "label": "Epilogue-Regular",
+                              "probability": 0.000039078626286936924
+                            },
+                            {
+                              "class_id": 1442,
+                              "label": "Reddit Sans Condensed-Regular",
+                              "probability": 0.00003213962190784514
+                            },
+                            {
+                              "class_id": 118,
+                              "label": "Archivo-Regular",
+                              "probability": 0.000019813887774944305
+                            }
+                          ],
+                          "text_is_container": false,
+                          "under_line": false
+                        }
+                      ]
+                    ],
+                    "single_height": 29,
+                    "text_box_height": 29,
+                    "text_entity_list_index": 3,
+                    "text_font_width": 284,
+                    "text_lang": "en"
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 9372,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "contentData": {
+                  "textValue": "by trained professionals"
+                }
+              },
+              {
+                "elementId": "TextView_333_203_605_72_12",
+                "elementName": "Efficient, scien",
+                "elementType": "Text",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      338,
+                      203
+                    ],
+                    "orginCoord": [
+                      338,
+                      203
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 600
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 72
+                  },
+                  "textConfig": {
+                    "fontFamily": "Inter",
+                    "fontFamilyRec": "Inter",
+                    "fontScoreRec": 0.9998689889907837,
+                    "fontSize": 39,
+                    "fontStyle": "semi_bold",
                     "fontStyleRec": "Bold",
                     "textAlign": [
                       "LEFT",
@@ -374,8 +1099,8 @@ export async function getUserDesignByID(designId) {
                   },
                   "textColor": {
                     "rgbValues": [
-                      139,
-                      80,
+                      47,
+                      47,
                       47
                     ]
                   },
@@ -386,1688 +1111,698 @@ export async function getUserDesignByID(designId) {
                       [
                         {
                           "binary": null,
-                          "binary_height": 54,
-                          "index": 111,
+                          "binary_height": 33,
+                          "index": 81,
                           "lang": "en",
                           "ocr_box": [
                             [
-                              729,
-                              885
+                              334,
+                              203
                             ],
                             [
-                              917,
-                              885
+                              934,
+                              203
                             ],
                             [
-                              917,
-                              951
+                              934,
+                              243
                             ],
                             [
-                              729,
-                              951
+                              334,
+                              243
                             ]
                           ],
                           "parent_index": null,
-                          "rec_score": 0.997097373008728,
+                          "rec_score": 0.9887888431549072,
                           "single_box": true,
                           "style": null,
-                          "text": "₹999",
+                          "text": "Efficient, scientifice infvored, confssiintiialy",
                           "text_font_list": [
                             {
-                              "class_id": 1423,
-                              "label": "Red Hat Display-Bold",
-                              "probability": 0.9185557961463928
+                              "class_id": 1148,
+                              "label": "News Cycle-Bold",
+                              "probability": 0.9997479319572449
                             },
                             {
-                              "class_id": 88,
-                              "label": "Anonymous Pro-Bold",
-                              "probability": 0.0627831444144249
+                              "class_id": 123,
+                              "label": "Arial Narrow-Bold",
+                              "probability": 0.0000912483228603378
                             },
                             {
-                              "class_id": 1406,
-                              "label": "Raleway-Bold",
-                              "probability": 0.002757549751549959
+                              "class_id": 1346,
+                              "label": "Pragati Narrow-Bold",
+                              "probability": 0.00003993661084678024
                             },
                             {
-                              "class_id": 1481,
-                              "label": "RocknRoll One-Regular",
-                              "probability": 0.0016643003327772021
+                              "class_id": 1630,
+                              "label": "Smooch Sans-Bold",
+                              "probability": 0.000018381942936684936
                             },
                             {
-                              "class_id": 653,
-                              "label": "Gabarito-Regular",
-                              "probability": 0.0013145845150575042
+                              "class_id": 256,
+                              "label": "Big Shoulders Text-Bold",
+                              "probability": 0.00001812825576053001
                             },
                             {
-                              "class_id": 1028,
-                              "label": "Manrope-Bold",
-                              "probability": 0.0011915391078218818
+                              "class_id": 114,
+                              "label": "Archivo Narrow-Bold",
+                              "probability": 0.000015823557987459935
                             },
                             {
-                              "class_id": 1125,
-                              "label": "Mulish-Bold",
-                              "probability": 0.0011554103111848235
+                              "class_id": 124,
+                              "label": "Arial Narrow-Bold Italic",
+                              "probability": 0.000009858221346803475
                             },
                             {
-                              "class_id": 904,
-                              "label": "Krona One-Regular",
-                              "probability": 0.0005503930733539164
+                              "class_id": 927,
+                              "label": "Lato-Bold Italic",
+                              "probability": 0.000005010828772356035
                             },
                             {
-                              "class_id": 42,
-                              "label": "Alexandria-Regular",
-                              "probability": 0.0004721861914731562
+                              "class_id": 1712,
+                              "label": "Stick No Bills-Bold",
+                              "probability": 0.000004289186563255498
                             },
                             {
-                              "class_id": 1424,
-                              "label": "Red Hat Display-Bold Italic",
-                              "probability": 0.00043328263564035296
+                              "class_id": 58,
+                              "label": "Alumni Sans-Bold",
+                              "probability": 0.00000363559183824691
                             }
                           ],
-                          "text_is_container": true,
+                          "text_is_container": false,
+                          "under_line": false
+                        }
+                      ],
+                      [
+                        {
+                          "binary": null,
+                          "binary_height": 39,
+                          "index": 82,
+                          "lang": "en",
+                          "ocr_box": [
+                            [
+                              333,
+                              236
+                            ],
+                            [
+                              746,
+                              236
+                            ],
+                            [
+                              746,
+                              275
+                            ],
+                            [
+                              333,
+                              275
+                            ]
+                          ],
+                          "parent_index": null,
+                          "rec_score": 0.9526295065879822,
+                          "single_box": true,
+                          "style": null,
+                          "text": "awopsod budgee, HairXpresso",
+                          "text_font_list": [
+                            {
+                              "class_id": 1148,
+                              "label": "News Cycle-Bold",
+                              "probability": 0.9998689889907837
+                            },
+                            {
+                              "class_id": 123,
+                              "label": "Arial Narrow-Bold",
+                              "probability": 0.00009342762496089563
+                            },
+                            {
+                              "class_id": 1347,
+                              "label": "Pragati Narrow-Regular",
+                              "probability": 0.000007004365670582047
+                            },
+                            {
+                              "class_id": 1630,
+                              "label": "Smooch Sans-Bold",
+                              "probability": 0.0000032782093057903694
+                            },
+                            {
+                              "class_id": 1712,
+                              "label": "Stick No Bills-Bold",
+                              "probability": 0.000001515714984634542
+                            },
+                            {
+                              "class_id": 273,
+                              "label": "Black And White Picture-Regular",
+                              "probability": 0.0000012245965308466111
+                            },
+                            {
+                              "class_id": 1337,
+                              "label": "Pontano Sans-Bold",
+                              "probability": 0.0000011571072491278755
+                            },
+                            {
+                              "class_id": 468,
+                              "label": "DIN Alternate-Bold",
+                              "probability": 0.0000010331962130294414
+                            },
+                            {
+                              "class_id": 256,
+                              "label": "Big Shoulders Text-Bold",
+                              "probability": 8.650486620354059e-7
+                            },
+                            {
+                              "class_id": 125,
+                              "label": "Arial Narrow-Regular",
+                              "probability": 7.802634058862168e-7
+                            }
+                          ],
+                          "text_is_container": false,
                           "under_line": false
                         }
                       ]
                     ],
-                    "single_height": 54,
-                    "text_box_height": 54,
-                    "text_entity_list_index": 4,
-                    "text_font_width": 188,
+                    "single_height": 39,
+                    "text_box_height": 72,
+                    "text_entity_list_index": 2,
+                    "text_font_width": 600,
                     "text_lang": "en"
                   }
                 },
                 "processingMeta": {
-                  "surfaceArea": 12408,
+                  "surfaceArea": 43560,
                   "detectionScore": 0,
-                  "textContainerized": true
+                  "textContainerized": false
                 },
                 "contentData": {
-                  "textValue": "₹999"
+                  "textValue": "Efficient, scientifice infvored, confssiintiialy\nawopsod budgee, HairXpresso"
+                }
+              },
+              {
+                "elementId": "TextView_170_131_768_69_13",
+                "elementName": "AF.PRECISION TEC",
+                "elementType": "Text",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      176,
+                      131
+                    ],
+                    "orginCoord": [
+                      176,
+                      131
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 762
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 69
+                  },
+                  "textConfig": {
+                    "fontFamily": "Inter",
+                    "fontFamilyRec": "Inter",
+                    "fontScoreRec": 0.835802367888391,
+                    "fontSize": 62,
+                    "fontStyle": "bold",
+                    "fontStyleRec": "Bold",
+                    "textAlign": [
+                      "LEFT",
+                      "CENTER"
+                    ]
+                  },
+                  "textColor": {
+                    "rgbValues": [
+                      206,
+                      74,
+                      74
+                    ]
+                  },
+                  "opacityLevel": 255,
+                  "rotationAngle": 0,
+                  "textExtraction": {
+                    "rows_text_position": [
+                      [
+                        {
+                          "binary": null,
+                          "binary_height": 61,
+                          "index": 88,
+                          "lang": "en",
+                          "ocr_box": [
+                            [
+                              170,
+                              131
+                            ],
+                            [
+                              938,
+                              131
+                            ],
+                            [
+                              938,
+                              200
+                            ],
+                            [
+                              170,
+                              200
+                            ]
+                          ],
+                          "parent_index": null,
+                          "rec_score": 0.9661897420883179,
+                          "single_box": true,
+                          "style": null,
+                          "text": "AF.PRECISION TECHINPURISS",
+                          "text_font_list": [
+                            {
+                              "class_id": 1437,
+                              "label": "Reddit Mono-Bold",
+                              "probability": 0.6701697111129761
+                            },
+                            {
+                              "class_id": 307,
+                              "label": "Cabin Condensed-Bold",
+                              "probability": 0.08408958464860916
+                            },
+                            {
+                              "class_id": 1253,
+                              "label": "PT Sans Narrow-Bold",
+                              "probability": 0.04564221203327179
+                            },
+                            {
+                              "class_id": 643,
+                              "label": "Freeman-Regular",
+                              "probability": 0.04248398542404175
+                            },
+                            {
+                              "class_id": 58,
+                              "label": "Alumni Sans-Bold",
+                              "probability": 0.031671203672885895
+                            },
+                            {
+                              "class_id": 542,
+                              "label": "Encode Sans Condensed-Bold",
+                              "probability": 0.01937948539853096
+                            },
+                            {
+                              "class_id": 1642,
+                              "label": "Sofia Sans Condensed-Bold",
+                              "probability": 0.017764920368790627
+                            },
+                            {
+                              "class_id": 1630,
+                              "label": "Smooch Sans-Bold",
+                              "probability": 0.013577990233898163
+                            },
+                            {
+                              "class_id": 1712,
+                              "label": "Stick No Bills-Bold",
+                              "probability": 0.012592554092407227
+                            },
+                            {
+                              "class_id": 1461,
+                              "label": "Roboto Condensed-Bold",
+                              "probability": 0.003928820602595806
+                            }
+                          ],
+                          "text_is_container": false,
+                          "under_line": false
+                        }
+                      ]
+                    ],
+                    "single_height": 62,
+                    "text_box_height": 62,
+                    "text_entity_list_index": 1,
+                    "text_font_width": 768,
+                    "text_lang": "en"
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 52992,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "contentData": {
+                  "textValue": "AF.PRECISION TECHINPURISS"
+                }
+              },
+              {
+                "elementId": "TextView_376_45_164_47_14",
+                "elementName": "JAWED",
+                "elementType": "Text",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      381,
+                      45
+                    ],
+                    "orginCoord": [
+                      381,
+                      45
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 159
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 47
+                  },
+                  "textConfig": {
+                    "fontFamily": "Inter",
+                    "fontFamilyRec": "Aclonica",
+                    "fontScoreRec": 0.9748409986495972,
+                    "fontSize": 35,
+                    "fontStyle": "bold",
+                    "fontStyleRec": "Regular",
+                    "textAlign": [
+                      "LEFT",
+                      "CENTER"
+                    ]
+                  },
+                  "textColor": {
+                    "rgbValues": [
+                      48,
+                      48,
+                      48
+                    ]
+                  },
+                  "opacityLevel": 255,
+                  "rotationAngle": 0,
+                  "textExtraction": {
+                    "rows_text_position": [
+                      [
+                        {
+                          "binary": null,
+                          "binary_height": 35,
+                          "index": 91,
+                          "lang": "en",
+                          "ocr_box": [
+                            [
+                              376,
+                              45
+                            ],
+                            [
+                              540,
+                              45
+                            ],
+                            [
+                              540,
+                              92
+                            ],
+                            [
+                              376,
+                              92
+                            ]
+                          ],
+                          "parent_index": null,
+                          "rec_score": 0.9998215436935425,
+                          "single_box": true,
+                          "style": null,
+                          "text": "JAWED",
+                          "text_font_list": [
+                            {
+                              "class_id": 6,
+                              "label": "Aclonica-Regular",
+                              "probability": 0.9748409986495972
+                            },
+                            {
+                              "class_id": 968,
+                              "label": "Libre Franklin-Bold",
+                              "probability": 0.011447349563241005
+                            },
+                            {
+                              "class_id": 153,
+                              "label": "Asul-Bold",
+                              "probability": 0.0023553092032670975
+                            },
+                            {
+                              "class_id": 1489,
+                              "label": "Rosario-Bold",
+                              "probability": 0.0018810621695593
+                            },
+                            {
+                              "class_id": 1900,
+                              "label": "Young Serif-Regular",
+                              "probability": 0.001134658814407885
+                            },
+                            {
+                              "class_id": 353,
+                              "label": "Caudex-Bold",
+                              "probability": 0.0009780232794582844
+                            },
+                            {
+                              "class_id": 1778,
+                              "label": "Trade Winds-Regular",
+                              "probability": 0.0008550017955712974
+                            },
+                            {
+                              "class_id": 1481,
+                              "label": "RocknRoll One-Regular",
+                              "probability": 0.0008265074575319886
+                            },
+                            {
+                              "class_id": 494,
+                              "label": "Della Respira-Regular",
+                              "probability": 0.0006074923439882696
+                            },
+                            {
+                              "class_id": 373,
+                              "label": "Cherry Cream Soda-Regular",
+                              "probability": 0.0005879684467799962
+                            }
+                          ],
+                          "text_is_container": false,
+                          "under_line": false
+                        }
+                      ]
+                    ],
+                    "single_height": 35,
+                    "text_box_height": 35,
+                    "text_entity_list_index": 5,
+                    "text_font_width": 164,
+                    "text_lang": "en"
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 7708,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "contentData": {
+                  "textValue": "JAWED"
+                }
+              },
+              {
+                "elementId": "TextView_551_45_142_47_15",
+                "elementName": "HABIB",
+                "elementType": "Text",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      551,
+                      45
+                    ],
+                    "orginCoord": [
+                      551,
+                      45
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 142
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 47
+                  },
+                  "textConfig": {
+                    "fontFamily": "Inter",
+                    "fontFamilyRec": "Aclonica",
+                    "fontScoreRec": 0.936416506767273,
+                    "fontSize": 35,
+                    "fontStyle": "bold",
+                    "fontStyleRec": "Regular",
+                    "textAlign": [
+                      "LEFT",
+                      "CENTER"
+                    ]
+                  },
+                  "textColor": {
+                    "rgbValues": [
+                      48,
+                      48,
+                      47
+                    ]
+                  },
+                  "opacityLevel": 255,
+                  "rotationAngle": 0,
+                  "textExtraction": {
+                    "rows_text_position": [
+                      [
+                        {
+                          "binary": null,
+                          "binary_height": 33,
+                          "index": 92,
+                          "lang": "en",
+                          "ocr_box": [
+                            [
+                              551,
+                              45
+                            ],
+                            [
+                              693,
+                              45
+                            ],
+                            [
+                              693,
+                              92
+                            ],
+                            [
+                              551,
+                              92
+                            ]
+                          ],
+                          "parent_index": null,
+                          "rec_score": 0.9991244077682495,
+                          "single_box": true,
+                          "style": null,
+                          "text": "HABIB",
+                          "text_font_list": [
+                            {
+                              "class_id": 6,
+                              "label": "Aclonica-Regular",
+                              "probability": 0.936416506767273
+                            },
+                            {
+                              "class_id": 968,
+                              "label": "Libre Franklin-Bold",
+                              "probability": 0.03926490992307663
+                            },
+                            {
+                              "class_id": 1900,
+                              "label": "Young Serif-Regular",
+                              "probability": 0.01359862182289362
+                            },
+                            {
+                              "class_id": 1489,
+                              "label": "Rosario-Bold",
+                              "probability": 0.002194046974182129
+                            },
+                            {
+                              "class_id": 153,
+                              "label": "Asul-Bold",
+                              "probability": 0.0017698510782793164
+                            },
+                            {
+                              "class_id": 1150,
+                              "label": "Newsreader-Bold",
+                              "probability": 0.0007461474160663784
+                            },
+                            {
+                              "class_id": 238,
+                              "label": "Besley-Bold",
+                              "probability": 0.0006969991372898221
+                            },
+                            {
+                              "class_id": 494,
+                              "label": "Della Respira-Regular",
+                              "probability": 0.0004640657571144402
+                            },
+                            {
+                              "class_id": 799,
+                              "label": "Instrument Sans-Bold",
+                              "probability": 0.0003353698120918125
+                            },
+                            {
+                              "class_id": 1314,
+                              "label": "Play-Bold",
+                              "probability": 0.0003031559463124722
+                            }
+                          ],
+                          "text_is_container": false,
+                          "under_line": false
+                        }
+                      ]
+                    ],
+                    "single_height": 35,
+                    "text_box_height": 35,
+                    "text_entity_list_index": 6,
+                    "text_font_width": 142,
+                    "text_lang": "en"
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 6674,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "contentData": {
+                  "textValue": "HABIB"
+                }
+              },
+              {
+                "elementId": "ImageView_537_47_15_19_16",
+                "elementName": "Image",
+                "elementType": "Image",
+                "layoutConfig": {
+                  "positionMode": "Absolute",
+                  "absoluteAttrs": {
+                    "align": [
+                      "LEFT",
+                      "TOP"
+                    ],
+                    "coord": [
+                      538,
+                      50
+                    ],
+                    "orginCoord": [
+                      538,
+                      50
+                    ]
+                  }
+                },
+                "styleConfig": {
+                  "widthSpec": {
+                    "sizing": "FIXED",
+                    "value": 14
+                  },
+                  "heightSpec": {
+                    "sizing": "FIXED",
+                    "value": 15
+                  }
+                },
+                "processingMeta": {
+                  "surfaceArea": 285,
+                  "detectionScore": 0,
+                  "textContainerized": false
+                },
+                "contentData": {
+                  "imageSource": "https://codia-f2c.s3.us-west-1.amazonaws.com/any2design/image/server/2025-09-01/bfce0666-deca-471f-8c73-6fff02b68625/out/20250901210910910947_0915749cc75a46f09a466fcd11d90306/20250901210916-image_bfce0666-deca-471f-8c73-6fff02b68625.png"
                 }
               }
             ],
             "contentData": {
               "imageSource": ""
-            }
-          },
-          {
-            "elementId": "TextView_99_915_419_75_8",
-            "elementName": "Available at Bet",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  106,
-                  915
-                ],
-                "orginCoord": [
-                  106,
-                  915
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 412
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 75
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": "Inter",
-                "fontScoreRec": 0.9978400236868765,
-                "fontSize": 24,
-                "fontStyle": "medium",
-                "fontStyleRec": "Regular",
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  228,
-                  208,
-                  194
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 24,
-                      "index": 99,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          103,
-                          915
-                        ],
-                        [
-                          515,
-                          915
-                        ],
-                        [
-                          515,
-                          952
-                        ],
-                        [
-                          103,
-                          952
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9915362596511841,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Available at Beth Bluen Urban",
-                      "text_font_list": [
-                        {
-                          "class_id": 1457,
-                          "label": "Risque-Regular",
-                          "probability": 0.18371443450450897
-                        },
-                        {
-                          "class_id": 129,
-                          "label": "Arimo-Italic",
-                          "probability": 0.09612476080656052
-                        },
-                        {
-                          "class_id": 1583,
-                          "label": "Schibsted Grotesk-Regular",
-                          "probability": 0.08625422418117523
-                        },
-                        {
-                          "class_id": 1352,
-                          "label": "Prociono-Regular",
-                          "probability": 0.07825096696615219
-                        },
-                        {
-                          "class_id": 682,
-                          "label": "Georama-Italic",
-                          "probability": 0.0617154985666275
-                        },
-                        {
-                          "class_id": 523,
-                          "label": "Eczar-Regular",
-                          "probability": 0.058553531765937805
-                        },
-                        {
-                          "class_id": 1474,
-                          "label": "Roboto Serif-Italic",
-                          "probability": 0.03952864557504654
-                        },
-                        {
-                          "class_id": 1402,
-                          "label": "Radley-Italic",
-                          "probability": 0.03332946449518204
-                        },
-                        {
-                          "class_id": 1559,
-                          "label": "Sanchez-Italic",
-                          "probability": 0.02786511927843094
-                        },
-                        {
-                          "class_id": 1582,
-                          "label": "Schibsted Grotesk-Italic",
-                          "probability": 0.023018285632133484
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ],
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 22,
-                      "index": 100,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          101,
-                          953
-                        ],
-                        [
-                          302,
-                          953
-                        ],
-                        [
-                          302,
-                          987
-                        ],
-                        [
-                          101,
-                          987
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.997675359249115,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Pet Locationts",
-                      "text_font_list": [
-                        {
-                          "class_id": 818,
-                          "label": "Inter-Regular",
-                          "probability": 0.9711721539497375
-                        },
-                        {
-                          "class_id": 1471,
-                          "label": "Roboto-Regular",
-                          "probability": 0.022275786846876144
-                        },
-                        {
-                          "class_id": 1465,
-                          "label": "Roboto Flex-Regular",
-                          "probability": 0.0014136246172711253
-                        },
-                        {
-                          "class_id": 816,
-                          "label": "Inter-Medium",
-                          "probability": 0.0012301276437938213
-                        },
-                        {
-                          "class_id": 740,
-                          "label": "Hanken Grotesk-Regular",
-                          "probability": 0.0007639296818524599
-                        },
-                        {
-                          "class_id": 141,
-                          "label": "Arvo-Regular",
-                          "probability": 0.0006853459635749459
-                        },
-                        {
-                          "class_id": 1542,
-                          "label": "SF NS Rounded-Regular",
-                          "probability": 0.0003369537298567593
-                        },
-                        {
-                          "class_id": 1397,
-                          "label": "Radio Canada Big-Regular",
-                          "probability": 0.0002738730108831078
-                        },
-                        {
-                          "class_id": 1365,
-                          "label": "Public Sans-Regular",
-                          "probability": 0.0002056392841041088
-                        },
-                        {
-                          "class_id": 662,
-                          "label": "Geist-Regular",
-                          "probability": 0.00016793492250144482
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 24,
-                "text_box_height": 72,
-                "text_entity_list_index": 1,
-                "text_font_width": 412,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 31425,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "Available at Beth Bluen Urban\nPet Locationts"
-            }
-          },
-          {
-            "elementId": "TextView_99_814_310_96_9",
-            "elementName": "Preventive Care\n",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  106,
-                  814
-                ],
-                "orginCoord": [
-                  106,
-                  814
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 303
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 96
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": "Inter",
-                "fontScoreRec": 0.9975286460976349,
-                "fontSize": 38,
-                "fontStyle": "semi_bold",
-                "fontStyleRec": "Medium",
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  229,
-                  215,
-                  199
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 29,
-                      "index": 101,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          102,
-                          817
-                        ],
-                        [
-                          381,
-                          817
-                        ],
-                        [
-                          381,
-                          856
-                        ],
-                        [
-                          102,
-                          856
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9962054491043091,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Preventive Care",
-                      "text_font_list": [
-                        {
-                          "class_id": 816,
-                          "label": "Inter-Medium",
-                          "probability": 0.5315864682197571
-                        },
-                        {
-                          "class_id": 819,
-                          "label": "Inter-Semi Bold",
-                          "probability": 0.26792579889297485
-                        },
-                        {
-                          "class_id": 1028,
-                          "label": "Manrope-Bold",
-                          "probability": 0.10158876329660416
-                        },
-                        {
-                          "class_id": 1397,
-                          "label": "Radio Canada Big-Regular",
-                          "probability": 0.0931042954325676
-                        },
-                        {
-                          "class_id": 653,
-                          "label": "Gabarito-Regular",
-                          "probability": 0.0025500350166112185
-                        },
-                        {
-                          "class_id": 1302,
-                          "label": "PingFang SC-Semibold",
-                          "probability": 0.0016192197799682617
-                        },
-                        {
-                          "class_id": 818,
-                          "label": "Inter-Regular",
-                          "probability": 0.00039962248411029577
-                        },
-                        {
-                          "class_id": 877,
-                          "label": "Karla-Bold",
-                          "probability": 0.00017077506345231086
-                        },
-                        {
-                          "class_id": 1054,
-                          "label": "McLaren-Regular",
-                          "probability": 0.0001298410352319479
-                        },
-                        {
-                          "class_id": 312,
-                          "label": "Cabin Sketch-Regular",
-                          "probability": 0.00007304665632545948
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ],
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 36,
-                      "index": 102,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          101,
-                          861
-                        ],
-                        [
-                          407,
-                          861
-                        ],
-                        [
-                          407,
-                          910
-                        ],
-                        [
-                          101,
-                          910
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9978137612342834,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Cheirt Enguyeney",
-                      "text_font_list": [
-                        {
-                          "class_id": 1397,
-                          "label": "Radio Canada Big-Regular",
-                          "probability": 0.5038989782333374
-                        },
-                        {
-                          "class_id": 816,
-                          "label": "Inter-Medium",
-                          "probability": 0.4519144594669342
-                        },
-                        {
-                          "class_id": 126,
-                          "label": "Arial-Regular",
-                          "probability": 0.01838698424398899
-                        },
-                        {
-                          "class_id": 1077,
-                          "label": "Microsoft Sans Serif-Regular",
-                          "probability": 0.00987169798463583
-                        },
-                        {
-                          "class_id": 1054,
-                          "label": "McLaren-Regular",
-                          "probability": 0.004247104749083519
-                        },
-                        {
-                          "class_id": 198,
-                          "label": "Balsamiq Sans-Regular",
-                          "probability": 0.0038036503829061985
-                        },
-                        {
-                          "class_id": 653,
-                          "label": "Gabarito-Regular",
-                          "probability": 0.001543535036034882
-                        },
-                        {
-                          "class_id": 468,
-                          "label": "DIN Alternate-Bold",
-                          "probability": 0.0014007388381287456
-                        },
-                        {
-                          "class_id": 819,
-                          "label": "Inter-Semi Bold",
-                          "probability": 0.001353552215732634
-                        },
-                        {
-                          "class_id": 92,
-                          "label": "Anta-Regular",
-                          "probability": 0.0007736227125860751
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 38,
-                "text_box_height": 93,
-                "text_entity_list_index": 2,
-                "text_font_width": 306,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 29760,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "Preventive Care\nCheirt Enguyeney"
-            }
-          },
-          {
-            "elementId": "TextView_441_636_93_48_10",
-            "elementName": "Wellness\nPackage",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  447,
-                  636
-                ],
-                "orginCoord": [
-                  447,
-                  636
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 87
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 48
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": "Inter",
-                "fontScoreRec": 0.8103348477743566,
-                "fontSize": 26,
-                "fontStyle": "regular",
-                "fontStyleRec": "Regular",
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  58,
-                  126,
-                  175
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 23,
-                      "index": 106,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          444,
-                          636
-                        ],
-                        [
-                          529,
-                          636
-                        ],
-                        [
-                          529,
-                          662
-                        ],
-                        [
-                          444,
-                          662
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9796997308731079,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Wellness",
-                      "text_font_list": [
-                        {
-                          "class_id": 198,
-                          "label": "Balsamiq Sans-Regular",
-                          "probability": 0.7408759593963623
-                        },
-                        {
-                          "class_id": 164,
-                          "label": "Autour One-Regular",
-                          "probability": 0.045018259435892105
-                        },
-                        {
-                          "class_id": 312,
-                          "label": "Cabin Sketch-Regular",
-                          "probability": 0.038575995713472366
-                        },
-                        {
-                          "class_id": 1339,
-                          "label": "Poor Story-Regular",
-                          "probability": 0.024767564609646797
-                        },
-                        {
-                          "class_id": 1190,
-                          "label": "Nunito-Bold",
-                          "probability": 0.01835089549422264
-                        },
-                        {
-                          "class_id": 1691,
-                          "label": "Special Elite-Regular",
-                          "probability": 0.01119706965982914
-                        },
-                        {
-                          "class_id": 1927,
-                          "label": "Zeyada-Regular",
-                          "probability": 0.008220446296036243
-                        },
-                        {
-                          "class_id": 1091,
-                          "label": "Monaco-Regular",
-                          "probability": 0.007148057222366333
-                        },
-                        {
-                          "class_id": 1761,
-                          "label": "Tilt Neon-Regular",
-                          "probability": 0.005383939947932959
-                        },
-                        {
-                          "class_id": 434,
-                          "label": "Courier New-Bold",
-                          "probability": 0.004594297613948584
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ],
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 27,
-                      "index": 107,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          444,
-                          653
-                        ],
-                        [
-                          532,
-                          653
-                        ],
-                        [
-                          532,
-                          684
-                        ],
-                        [
-                          444,
-                          684
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9591816663742065,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Packager",
-                      "text_font_list": [
-                        {
-                          "class_id": 369,
-                          "label": "Chelsea Market-Regular",
-                          "probability": 0.8646562695503235
-                        },
-                        {
-                          "class_id": 716,
-                          "label": "Grandstander-Regular",
-                          "probability": 0.03386915847659111
-                        },
-                        {
-                          "class_id": 840,
-                          "label": "Jersey 15-Regular",
-                          "probability": 0.010729831643402576
-                        },
-                        {
-                          "class_id": 1457,
-                          "label": "Risque-Regular",
-                          "probability": 0.009983002208173275
-                        },
-                        {
-                          "class_id": 312,
-                          "label": "Cabin Sketch-Regular",
-                          "probability": 0.009900718927383423
-                        },
-                        {
-                          "class_id": 715,
-                          "label": "Grandstander-Italic",
-                          "probability": 0.00988828670233488
-                        },
-                        {
-                          "class_id": 273,
-                          "label": "Black And White Picture-Regular",
-                          "probability": 0.0034287716262042522
-                        },
-                        {
-                          "class_id": 1004,
-                          "label": "Love Ya Like A Sister-Regular",
-                          "probability": 0.0032058937940746546
-                        },
-                        {
-                          "class_id": 218,
-                          "label": "Beiruti-Bold",
-                          "probability": 0.002838420681655407
-                        },
-                        {
-                          "class_id": 1435,
-                          "label": "Red Rose-Bold",
-                          "probability": 0.002323199063539505
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 26,
-                "text_box_height": 48,
-                "text_entity_list_index": 6,
-                "text_font_width": 88,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 4464,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "Wellness\nPackager"
-            }
-          },
-          {
-            "elementId": "TextView_442_609_162_21_11",
-            "elementName": "Prevethn Nult.Sp",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  446,
-                  609
-                ],
-                "orginCoord": [
-                  446,
-                  609
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 158
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 21
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": null,
-                "fontScoreRec": null,
-                "fontSize": 16,
-                "fontStyle": "regular",
-                "fontStyleRec": null,
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  81,
-                  90,
-                  99
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 16,
-                      "index": 113,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          442,
-                          609
-                        ],
-                        [
-                          604,
-                          609
-                        ],
-                        [
-                          604,
-                          630
-                        ],
-                        [
-                          442,
-                          630
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9759500622749329,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Prevethn Nult.Specially",
-                      "text_font_list": [
-                        {
-                          "class_id": 1057,
-                          "label": "MedievalSharp-Regular",
-                          "probability": 0.34573793411254883
-                        },
-                        {
-                          "class_id": 171,
-                          "label": "Averia Libre-Regular",
-                          "probability": 0.22819304466247559
-                        },
-                        {
-                          "class_id": 312,
-                          "label": "Cabin Sketch-Regular",
-                          "probability": 0.1561548113822937
-                        },
-                        {
-                          "class_id": 1481,
-                          "label": "RocknRoll One-Regular",
-                          "probability": 0.024650147184729576
-                        },
-                        {
-                          "class_id": 632,
-                          "label": "Forum-Regular",
-                          "probability": 0.021593984216451645
-                        },
-                        {
-                          "class_id": 716,
-                          "label": "Grandstander-Regular",
-                          "probability": 0.015937112271785736
-                        },
-                        {
-                          "class_id": 1004,
-                          "label": "Love Ya Like A Sister-Regular",
-                          "probability": 0.011866570450365543
-                        },
-                        {
-                          "class_id": 1224,
-                          "label": "Orienta-Regular",
-                          "probability": 0.009301564656198025
-                        },
-                        {
-                          "class_id": 1367,
-                          "label": "Puritan-Bold",
-                          "probability": 0.008105107583105564
-                        },
-                        {
-                          "class_id": 1083,
-                          "label": "Modern Antiqua-Regular",
-                          "probability": 0.0071536218747496605
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 16,
-                "text_box_height": 16,
-                "text_entity_list_index": 7,
-                "text_font_width": 162,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 3402,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "Prevethn Nult.Specially"
-            }
-          },
-          {
-            "elementId": "TextView_483_575_101_28_12",
-            "elementName": "vet72",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  487,
-                  575
-                ],
-                "orginCoord": [
-                  487,
-                  575
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 97
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 28
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": null,
-                "fontScoreRec": null,
-                "fontSize": 24,
-                "fontStyle": "bold",
-                "fontStyleRec": null,
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  48,
-                  114,
-                  156
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 22,
-                      "index": 114,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          483,
-                          575
-                        ],
-                        [
-                          584,
-                          575
-                        ],
-                        [
-                          584,
-                          603
-                        ],
-                        [
-                          483,
-                          603
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9986885786056519,
-                      "single_box": true,
-                      "style": null,
-                      "text": "vet72",
-                      "text_font_list": [
-                        {
-                          "class_id": 351,
-                          "label": "Catamaran-Bold",
-                          "probability": 0.46421483159065247
-                        },
-                        {
-                          "class_id": 36,
-                          "label": "Aleo-Bold",
-                          "probability": 0.145326629281044
-                        },
-                        {
-                          "class_id": 1439,
-                          "label": "Reddit Sans-Bold",
-                          "probability": 0.06160733848810196
-                        },
-                        {
-                          "class_id": 342,
-                          "label": "Carlito-Bold",
-                          "probability": 0.03375014290213585
-                        },
-                        {
-                          "class_id": 1780,
-                          "label": "Trebuchet MS-Bold",
-                          "probability": 0.03187039494514465
-                        },
-                        {
-                          "class_id": 369,
-                          "label": "Chelsea Market-Regular",
-                          "probability": 0.025705009698867798
-                        },
-                        {
-                          "class_id": 1004,
-                          "label": "Love Ya Like A Sister-Regular",
-                          "probability": 0.015816790983080864
-                        },
-                        {
-                          "class_id": 50,
-                          "label": "Allerta Stencil-Regular",
-                          "probability": 0.014835244044661522
-                        },
-                        {
-                          "class_id": 1623,
-                          "label": "Skranji-Regular",
-                          "probability": 0.013894724659621716
-                        },
-                        {
-                          "class_id": 352,
-                          "label": "Catamaran-Regular",
-                          "probability": 0.012154977768659592
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 24,
-                "text_box_height": 24,
-                "text_entity_list_index": 8,
-                "text_font_width": 101,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 2828,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "vet72"
-            }
-          },
-          {
-            "elementId": "TextView_436_533_153_40_13",
-            "elementName": "sm-blue",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  442,
-                  533
-                ],
-                "orginCoord": [
-                  442,
-                  533
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 147
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 40
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": null,
-                "fontScoreRec": null,
-                "fontSize": 38,
-                "fontStyle": "regular",
-                "fontStyleRec": null,
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  36,
-                  54,
-                  68
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 38,
-                      "index": 112,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          436,
-                          533
-                        ],
-                        [
-                          589,
-                          533
-                        ],
-                        [
-                          589,
-                          573
-                        ],
-                        [
-                          436,
-                          573
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9993759989738464,
-                      "single_box": true,
-                      "style": null,
-                      "text": "sm-blue",
-                      "text_font_list": [
-                        {
-                          "class_id": 1481,
-                          "label": "RocknRoll One-Regular",
-                          "probability": 0.2933040261268616
-                        },
-                        {
-                          "class_id": 342,
-                          "label": "Carlito-Bold",
-                          "probability": 0.1799796223640442
-                        },
-                        {
-                          "class_id": 369,
-                          "label": "Chelsea Market-Regular",
-                          "probability": 0.10685040801763535
-                        },
-                        {
-                          "class_id": 312,
-                          "label": "Cabin Sketch-Regular",
-                          "probability": 0.05715712904930115
-                        },
-                        {
-                          "class_id": 36,
-                          "label": "Aleo-Bold",
-                          "probability": 0.04225539788603783
-                        },
-                        {
-                          "class_id": 1457,
-                          "label": "Risque-Regular",
-                          "probability": 0.032343678176403046
-                        },
-                        {
-                          "class_id": 20,
-                          "label": "Aladin-Regular",
-                          "probability": 0.02923082560300827
-                        },
-                        {
-                          "class_id": 353,
-                          "label": "Caudex-Bold",
-                          "probability": 0.013526234775781631
-                        },
-                        {
-                          "class_id": 307,
-                          "label": "Cabin Condensed-Bold",
-                          "probability": 0.012759028002619743
-                        },
-                        {
-                          "class_id": 1489,
-                          "label": "Rosario-Bold",
-                          "probability": 0.009874558076262474
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 38,
-                "text_box_height": 38,
-                "text_entity_list_index": 5,
-                "text_font_width": 153,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 6120,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "sm-blue"
-            }
-          },
-          {
-            "elementId": "TextView_224_243_587_45_14",
-            "elementName": "Preventive Care ",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  233,
-                  243
-                ],
-                "orginCoord": [
-                  233,
-                  243
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 578
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 45
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": "Inter",
-                "fontScoreRec": 0.9984240531921387,
-                "fontSize": 35,
-                "fontStyle": "semi_bold",
-                "fontStyleRec": "Medium",
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  218,
-                  212,
-                  209
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 33,
-                      "index": 110,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          224,
-                          243
-                        ],
-                        [
-                          811,
-                          243
-                        ],
-                        [
-                          811,
-                          288
-                        ],
-                        [
-                          224,
-                          288
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9893447756767273,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Preventive Care That Works.",
-                      "text_font_list": [
-                        {
-                          "class_id": 816,
-                          "label": "Inter-Medium",
-                          "probability": 0.9984240531921387
-                        },
-                        {
-                          "class_id": 818,
-                          "label": "Inter-Regular",
-                          "probability": 0.001006956910714507
-                        },
-                        {
-                          "class_id": 819,
-                          "label": "Inter-Semi Bold",
-                          "probability": 0.00020562272402457893
-                        },
-                        {
-                          "class_id": 662,
-                          "label": "Geist-Regular",
-                          "probability": 0.00008071361662587151
-                        },
-                        {
-                          "class_id": 1054,
-                          "label": "McLaren-Regular",
-                          "probability": 0.00005568562482949346
-                        },
-                        {
-                          "class_id": 817,
-                          "label": "Inter-Medium Italic",
-                          "probability": 0.000051394508773228154
-                        },
-                        {
-                          "class_id": 1397,
-                          "label": "Radio Canada Big-Regular",
-                          "probability": 0.00002564084206824191
-                        },
-                        {
-                          "class_id": 141,
-                          "label": "Arvo-Regular",
-                          "probability": 0.00002492496423656121
-                        },
-                        {
-                          "class_id": 742,
-                          "label": "Hedvig Letters Sans-Regular",
-                          "probability": 0.000013847176887793466
-                        },
-                        {
-                          "class_id": 1343,
-                          "label": "Poppins-Regular",
-                          "probability": 0.000013551882148021832
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 35,
-                "text_box_height": 35,
-                "text_entity_list_index": 3,
-                "text_font_width": 587,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 26415,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "Preventive Care That Works."
-            }
-          },
-          {
-            "elementId": "TextView_174_51_684_187_15",
-            "elementName": "KeepThem This\nHa",
-            "elementType": "Text",
-            "layoutConfig": {
-              "positionMode": "Absolute",
-              "absoluteAttrs": {
-                "align": [
-                  "LEFT",
-                  "TOP"
-                ],
-                "coord": [
-                  183,
-                  51
-                ],
-                "orginCoord": [
-                  183,
-                  51
-                ]
-              }
-            },
-            "styleConfig": {
-              "widthSpec": {
-                "sizing": "FIXED",
-                "value": 675
-              },
-              "heightSpec": {
-                "sizing": "FIXED",
-                "value": 187
-              },
-              "textConfig": {
-                "fontFamily": "Inter",
-                "fontFamilyRec": "Times New Roman",
-                "fontScoreRec": 0.9972761273384094,
-                "fontSize": 96,
-                "fontStyle": "bold",
-                "fontStyleRec": "Bold",
-                "textAlign": [
-                  "LEFT",
-                  "CENTER"
-                ]
-              },
-              "textColor": {
-                "rgbValues": [
-                  218,
-                  207,
-                  166
-                ]
-              },
-              "opacityLevel": 255,
-              "rotationAngle": 0,
-              "textExtraction": {
-                "rows_text_position": [
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 99,
-                      "index": 97,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          174,
-                          51
-                        ],
-                        [
-                          858,
-                          51
-                        ],
-                        [
-                          858,
-                          161
-                        ],
-                        [
-                          174,
-                          161
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.969572901725769,
-                      "single_box": true,
-                      "style": null,
-                      "text": "KeepThem This",
-                      "text_font_list": [
-                        {
-                          "class_id": 479,
-                          "label": "DM Serif Text-Regular",
-                          "probability": 0.9972761273384094
-                        },
-                        {
-                          "class_id": 772,
-                          "label": "Ibarra Real Nova-Bold",
-                          "probability": 0.0026019816286861897
-                        },
-                        {
-                          "class_id": 478,
-                          "label": "DM Serif Text-Italic",
-                          "probability": 0.000060694077546941116
-                        },
-                        {
-                          "class_id": 512,
-                          "label": "EB Garamond-Bold",
-                          "probability": 0.000008683852684043813
-                        },
-                        {
-                          "class_id": 696,
-                          "label": "Gloock-Regular",
-                          "probability": 0.000004622298092726851
-                        },
-                        {
-                          "class_id": 1151,
-                          "label": "Newsreader-Bold Italic",
-                          "probability": 0.000002735082262006472
-                        },
-                        {
-                          "class_id": 1295,
-                          "label": "Piazzolla-Bold",
-                          "probability": 0.000002456495394653757
-                        },
-                        {
-                          "class_id": 1180,
-                          "label": "Noto Serif SC-Bold",
-                          "probability": 0.000001984585878744838
-                        },
-                        {
-                          "class_id": 1664,
-                          "label": "Songti TC-Bold",
-                          "probability": 0.0000015588963151458302
-                        },
-                        {
-                          "class_id": 245,
-                          "label": "Big Caslon-Medium",
-                          "probability": 0.0000015457650306416326
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ],
-                  [
-                    {
-                      "binary": null,
-                      "binary_height": 103,
-                      "index": 98,
-                      "lang": "en",
-                      "ocr_box": [
-                        [
-                          218,
-                          132
-                        ],
-                        [
-                          827,
-                          132
-                        ],
-                        [
-                          827,
-                          238
-                        ],
-                        [
-                          218,
-                          238
-                        ]
-                      ],
-                      "parent_index": null,
-                      "rec_score": 0.9901964664459229,
-                      "single_box": true,
-                      "style": null,
-                      "text": "Happy Always",
-                      "text_font_list": [
-                        {
-                          "class_id": 479,
-                          "label": "DM Serif Text-Regular",
-                          "probability": 0.9959298968315125
-                        },
-                        {
-                          "class_id": 772,
-                          "label": "Ibarra Real Nova-Bold",
-                          "probability": 0.004028193652629852
-                        },
-                        {
-                          "class_id": 478,
-                          "label": "DM Serif Text-Italic",
-                          "probability": 0.000017800997738959268
-                        },
-                        {
-                          "class_id": 863,
-                          "label": "Judson-Bold",
-                          "probability": 0.000002062248995571281
-                        },
-                        {
-                          "class_id": 1764,
-                          "label": "Times LT-Regular",
-                          "probability": 0.0000019939795947720995
-                        },
-                        {
-                          "class_id": 1295,
-                          "label": "Piazzolla-Bold",
-                          "probability": 0.0000019704671103681903
-                        },
-                        {
-                          "class_id": 512,
-                          "label": "EB Garamond-Bold",
-                          "probability": 0.0000016643489288981073
-                        },
-                        {
-                          "class_id": 1180,
-                          "label": "Noto Serif SC-Bold",
-                          "probability": 0.0000015463969020856894
-                        },
-                        {
-                          "class_id": 1900,
-                          "label": "Young Serif-Regular",
-                          "probability": 9.023512461681094e-7
-                        },
-                        {
-                          "class_id": 339,
-                          "label": "Cardo-Bold",
-                          "probability": 8.708857990313845e-7
-                        }
-                      ],
-                      "text_is_container": false,
-                      "under_line": false
-                    }
-                  ]
-                ],
-                "single_height": 96,
-                "text_box_height": 187,
-                "text_entity_list_index": 0,
-                "text_font_width": 684,
-                "text_lang": "en"
-              }
-            },
-            "processingMeta": {
-              "surfaceArea": 127908,
-              "detectionScore": 0,
-              "textContainerized": false
-            },
-            "contentData": {
-              "textValue": "KeepThem This\nHappy Always"
             }
           }
         ]

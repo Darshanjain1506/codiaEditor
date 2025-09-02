@@ -4,11 +4,11 @@ import { useParams, useRouter } from "next/navigation";
 import Canvas from "./canvas";
 import Header from "./header";
 import Sidebar from "./sidebar";
-import { useCallback, useEffect, useState } from "react";
+import { use, useCallback, useEffect, useState } from "react";
 import { useEditorStore } from "@/store";
 import { getUserDesignByID } from "@/services/design-service";
 import Properties from "./properties";
-import { addImageToCanvas, addTextToCanvas, centerCanvas } from "@/fabric/fabric-utils";
+import { addImageToCanvas, addShapeToCanvas, addTextToCanvas, centerCanvas } from "@/fabric/fabric-utils";
 import { rgbToHex } from "@/lib/utils";
 
 
@@ -19,6 +19,8 @@ function MainEditor() {
 
   const [isLoading, setIsLoading] = useState(!!designId);
   const [loadAttempted, setLoadAttempted] = useState(false);
+  const [imageCodiaJson, setImageCodiaJson] = useState(null);
+
   const [error, setError] = useState(null);
 
   const {
@@ -69,15 +71,23 @@ function MainEditor() {
   }, [canvas]);
 
   //load the design ->
-  const loadDesign = useCallback(async () => {
+  const loadDesign = useCallback(async (codiaJson) => {
     if (!canvas || loadAttempted) return;
+
     try {
       setIsLoading(true);
       setLoadAttempted(true);
       const scaleFactor = 2;
-      // Fetch data from your API (change URL/service if needed)
-      const response = await getUserDesignByID(designId);
-      const data = response.data;
+
+      // Fetch data from your API
+      let data;
+      if (!codiaJson) {
+        const response = await getUserDesignByID(designId);
+        data = response.data;
+      } else {
+        data = codiaJson;
+      }
+
 
       if (!data?.data?.visualElement) {
         throw new Error("Invalid design data structure");
@@ -85,47 +95,141 @@ function MainEditor() {
 
       const { configuration, visualElement } = data.data;
 
-      // 1. Reset and set canvas dimensions
+      // Reset and set canvas dimensions
       canvas.clear();
-      const width = visualElement?.styleConfig?.widthSpec?.value // Use width if available
-      const height = visualElement?.styleConfig?.heightSpec?.value // Use height if available
-      console.log(canvas, "canvas in load design", width, height);
+      const width = visualElement?.styleConfig?.widthSpec?.value;
+      const height = visualElement?.styleConfig?.heightSpec?.value;
 
       canvas.setHeight(height / scaleFactor);
       canvas.setWidth(width / scaleFactor);
-      canvas.renderAll();
-      // 2. Set background color
+
+      // Set background color
       const bgColor = visualElement?.styleConfig?.backgroundSpec?.backgroundColor;
-      const hex = rgbToHex(...bgColor.rgb);
-      canvas.backgroundColor = hex;
-      // 3. Iterate through elements
-      for (const element of visualElement?.childElements) {
-        const { elementType, layoutConfig, styleConfig, contentData } = element;
-        const [x, y] = layoutConfig?.absoluteAttrs?.coord || [0, 0];
+      if (bgColor) {
+        const hex = rgbToHex(...bgColor.rgb);
+        canvas.backgroundColor = hex;
+      }
+
+      // Unified function to render elements
+      const renderElement = async (element, parentX = 0, parentY = 0) => {
+        const { elementType, layoutConfig, styleConfig, contentData, childElements } = element;
+
+        // Calculate absolute position
+        const [relativeX, relativeY] = layoutConfig?.absoluteAttrs?.coord || [0, 0];
+        const absoluteX = parentX + relativeX;
+        const absoluteY = parentY + relativeY;
+
         const width = styleConfig?.widthSpec?.value || null;
         const height = styleConfig?.heightSpec?.value || null;
+        const opacity = styleConfig?.opacityLevel !== undefined ? styleConfig.opacityLevel / 255 : 1;
+        const rotation = styleConfig?.rotationAngle || 0;
 
-        if (elementType === "Image") {
-          await addImageToCanvas(canvas, contentData?.imageSource, x / scaleFactor, y / scaleFactor, width / scaleFactor, height / scaleFactor, false);
+        // Common properties for all elements
+        const commonProps = {
+          left: absoluteX / scaleFactor,
+          top: absoluteY / scaleFactor,
+          opacity,
+          angle: rotation,
+          selectable: true,
+        };
+
+        // Render based on element type
+        switch (elementType) {
+          case "Image":
+            if (contentData?.imageSource) {
+              await addImageToCanvas(
+                canvas,
+                contentData.imageSource,
+                absoluteX / scaleFactor,
+                absoluteY / scaleFactor,
+                width / scaleFactor,
+                height / scaleFactor,
+                true
+              );
+            } else if (styleConfig) {
+              // Handle image elements without source but with style (like button backgrounds)
+              await addShapeToCanvas(canvas, "rectangle", {
+                ...commonProps,
+                width: width / scaleFactor,
+                height: height / scaleFactor,
+                fill: styleConfig.textColor
+                  ? `rgb(${styleConfig.textColor.rgbValues.join(",")})`
+                  : 'transparent',
+                stroke: styleConfig.borderConfig?.borderColor
+                  ? `rgb(${styleConfig.borderConfig.borderColor.rgbValues.join(",")})`
+                  : undefined,
+                strokeWidth: styleConfig.borderConfig?.borderWidth || 0,
+                rx: styleConfig.borderConfig?.borderRadius?.[0] / scaleFactor || 0,
+                ry: styleConfig.borderConfig?.borderRadius?.[1] / scaleFactor || 0,
+              });
+            }
+            break;
+
+          case "Text":
+            if (contentData?.textValue) {
+              await addTextToCanvas(canvas, contentData.textValue, {
+                ...commonProps,
+                fontSize: (styleConfig?.textConfig?.fontSize || 20) / scaleFactor,
+                fontFamily: styleConfig?.textConfig?.fontFamily || "Arial",
+                fill: styleConfig?.textColor
+                  ? `rgb(${styleConfig.textColor.rgbValues.join(",")})`
+                  : "#000000",
+                fontWeight: getFontWeight(styleConfig?.textConfig?.fontStyle),
+                textAlign: getTextAlign(styleConfig?.textConfig?.textAlign),
+                width: width / scaleFactor,
+                height: height / scaleFactor,
+              });
+            }
+            break;
+
+          case "Layer":
+            // Create background for layer elements
+            if (styleConfig) {
+              await addShapeToCanvas(canvas, "rectangle", {
+                ...commonProps,
+                width: width / scaleFactor,
+                height: height / scaleFactor,
+                fill: styleConfig.textColor
+                  ? `rgb(${styleConfig.textColor.rgbValues.join(",")})`
+                  : 'transparent',
+                stroke: styleConfig.borderConfig?.borderColor
+                  ? `rgb(${styleConfig.borderConfig.borderColor.rgbValues.join(",")})`
+                  : undefined,
+                strokeWidth: styleConfig.borderConfig?.borderWidth || 0,
+                rx: styleConfig.borderConfig?.borderRadius?.[0] / scaleFactor || 0,
+                ry: styleConfig.borderConfig?.borderRadius?.[1] / scaleFactor || 0,
+
+
+              });
+            }
+            break;
+
+          case "Body":
+            // Root element, no need to render anything specifically
+            break;
+
+          default:
+            console.warn(`Unhandled element type: ${elementType}`);
         }
 
-        if (elementType === "Text") {
-          addTextToCanvas(canvas, contentData?.textValue || "Sample Text", {
-            left: x / scaleFactor,
-            top: y / scaleFactor,
-            fontSize: styleConfig?.textConfig?.fontSize / scaleFactor || 20,
-            fontFamily: styleConfig?.textConfig?.fontFamily || "Arial",
-            fill: styleConfig?.textColor
-              ? `rgb(${styleConfig.textColor.rgbValues.join(",")})`
-              : "#000000",
-            fontWeight: styleConfig?.textConfig?.fontStyle === "bold" ? "bold" : "normal",
-          });
+        // Recursively render child elements
+        if (childElements && Array.isArray(childElements)) {
+          for (const childElement of childElements) {
+            await renderElement(childElement, absoluteX, absoluteY);
+          }
+        }
+      };
 
+      // Start rendering from root elements
+      if (visualElement?.childElements && Array.isArray(visualElement.childElements)) {
+        for (const element of visualElement.childElements) {
+          await renderElement(element, 0, 0);
         }
       }
-      canvas.renderAll();
 
+      canvas.renderAll();
       setIsLoading(false);
+
     } catch (e) {
       console.error("Failed to load Codia JSON design:", e);
       setError("Failed to load design");
@@ -133,101 +237,49 @@ function MainEditor() {
     }
   }, [canvas, designId, loadAttempted]);
 
-  // const loadDesign = useCallback(async () => {
-  //   if (!canvas || loadAttempted) return;
-  //   try {
-  //     setIsLoading(true);
-  //     setLoadAttempted(true);
+  // Helper function to get font weight
+  const getFontWeight = (fontStyle) => {
+    if (!fontStyle) return "normal";
+    const style = fontStyle.toLowerCase();
+    if (style.includes("bold")) return "bold";
+    if (style.includes("medium")) return "500";
+    if (style.includes("semi")) return "600";
+    return "normal";
+  };
 
-  //     const response = await getUserDesignByID(designId);
-  //     const design = response.data;
-  //     console.log(design, "sdfsdf");
-
-  //     if (design) {
-  //       //update name
-  //       setName(design?.name);
-
-  //       //set the design ID just incase after getting the data
-  //       setDesignId(designId);
-
-  //       try {
-  //         if (design.canvasData) {
-  //           canvas.clear();
-  //           if (design.width && design.height) {
-  //             canvas.setDimensions({
-  //               width: design.width,
-  //               height: design.height,
-  //             });
-  //           }
-
-  //           const canvasData =
-  //             typeof design.canvasData === "string"
-  //               ? JSON.parse(design.canvasData)
-  //               : design.canvasData;
-
-  //           const hasObjects =
-  //             canvasData.objects && canvasData.objects.length > 0;
-
-  //           if (canvasData.background) {
-  //             canvas.backgroundColor = canvasData.background;
-  //           } else {
-  //             canvas.backgroundColor = "#ffffff";
-  //           }
-
-  //           if (!hasObjects) {
-  //             canvas.renderAll();
-  //             return true;
-  //           }
-
-  //           canvas
-  //             .loadFromJSON(design.canvasData)
-  //             .then((canvas) => canvas.requestRenderAll());
-  //         } else {
-  //           console.log("no canvas data");
-  //           canvas.clear();
-  //           canvas.setWidth(design.width);
-  //           canvas.setHeight(design.height);
-  //           canvas.backgroundColor = "#ffffff";
-  //           canvas.renderAll();
-  //         }
-  //       } catch (e) {
-  //         console.error(("Error loading canvas", e));
-  //         setError("Error loading canvas");
-  //       } finally {
-  //         setIsLoading(false);
-  //       }
-  //     }
-
-  //     console.log(response);
-  //   } catch (e) {
-  //     console.error("Failed to load design", e);
-  //     setError("failed to load design");
-  //     setIsLoading(false);
-  //   }
-  // }, [canvas, loadAttempted, setDesignId]);
-
-
+  // Helper function to get text alignment
+  const getTextAlign = (textAlign) => {
+    if (!textAlign || !Array.isArray(textAlign)) return "left";
+    return textAlign[0].toLowerCase();
+  };
 
 
   useEffect(() => {
-    setTimeout(() => {
-      loadDesign()
-    }, 100)
+    // setTimeout(() => {
+    //   loadDesign()
+    // }, 100)
 
     // if (!designId) {
     //   setTimeout(() => {
     //     console.log("No design ID found");
     //     canvas?.clear();
 
-    //     // canvas?.height && canvas.setHeight(400);
-    //     // canvas?.width && canvas.setWidth(700);
-    //     // canvas.backgroundColor = "#ffffff"
+    //     canvas?.height && canvas.setHeight(500);
+    //     canvas?.width && canvas.setWidth(400);
+    //     canvas.backgroundColor = "#ffffff"
     //     canvas.renderAll();
     //   }, 100)
 
 
     // }
   }, [canvas, designId, loadAttempted, router]);
+
+  useEffect(() => {
+    if (imageCodiaJson) {
+      // Load the design from the Codia JSON
+      loadDesign(imageCodiaJson);
+    }
+  }, [imageCodiaJson]);
 
   // useEffect(() => {
   //   centerCanvas(canvas, showProperties, isEditing);
@@ -263,7 +315,7 @@ function MainEditor() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <Header />
+      <Header imageCodiaJson={imageCodiaJson} setImageCodiaJson={setImageCodiaJson} />
       <div className="flex flex-1 overflow-hidden">
         {isEditing && <Sidebar />}
 
@@ -274,6 +326,7 @@ function MainEditor() {
         </div>
       </div>
       {showProperties && isEditing && <Properties />}
+
 
     </div>
   );

@@ -13,6 +13,7 @@ import {
   ChevronDown,
   Download,
   Eye,
+  FilePlus,
   Loader2,
   LogOut,
   Pencil,
@@ -20,6 +21,8 @@ import {
   SaveOff,
   Share,
   Star,
+  Upload,
+  UploadIcon,
 } from "lucide-react";
 // import { signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -28,8 +31,10 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import ImageUploadModal from "../modal/ImageUploadModal";
 
-function Header() {
+function Header({ imageCodiaJson,
+  setImageCodiaJson }) {
   const {
     isEditing,
     setIsEditing,
@@ -42,10 +47,11 @@ function Header() {
     userDesigns,
     userSubscription,
     setShowPremiumModal,
+
   } = useEditorStore();
   // const { data: session } = useSession();
   const [showExportModal, setShowExportModal] = useState(false);
-
+  const [isUploadOpen, setIsUploadOpen] = useState(false);
   const handleLogout = () => {
     // signOut();
   };
@@ -78,7 +84,13 @@ function Header() {
   return (
     <header className="header-gradient header flex items-center justify-end px-4 h-14">
       <div className="flex items-center  space-x-2">
-
+        <button
+          onClick={() => setIsUploadOpen(true)}
+          className="header-button ml-3 relative"
+          title="Upload"
+        >
+          <FilePlus className="w-5 h-5" />
+        </button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild="true">
             <button className="header-button flex items-center text-white">
@@ -130,6 +142,7 @@ function Header() {
 
 
       <ExportModal isOpen={showExportModal} onClose={setShowExportModal} />
+      <ImageUploadModal isOpen={isUploadOpen} onClose={() => setIsUploadOpen(false)} imageCodiaJson={imageCodiaJson} setImageCodiaJson={setImageCodiaJson} />
     </header>
   );
 }

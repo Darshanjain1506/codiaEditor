@@ -46,8 +46,9 @@ function UploadPanel() {
 
     try {
       const result = await uploadFileWithAuth(file);
+      console.log(result.data.url, "sdfsdfsdf");
 
-      setUserUploads((prev) => [result?.data, ...prev]);
+      setUserUploads((prev) => [result.data, ...prev]);
 
       console.log(result);
     } catch (e) {
@@ -60,7 +61,9 @@ function UploadPanel() {
 
   const handleAddImage = (imageUrl) => {
     if (!canvas) return;
-    addImageToCanvas(canvas, imageUrl);
+    console.log("adding......", imageUrl);
+
+    addImageToCanvas(canvas, imageUrl, 100, 100, 400, 400);
   };
 
   console.log(userUploads, "userUploads");

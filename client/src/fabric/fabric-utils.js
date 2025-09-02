@@ -106,7 +106,7 @@ export const addImageToCanvas = async (canvas, imageUrl, x, y, width, height, is
 
     const imgObj = new Image();
     imgObj.crossOrigin = "Anonymous";
-    imgObj.src = imageUrl;
+    imgObj.src = imageUrl.trim();
 
     return new Promise((resolve, reject) => {
       imgObj.onload = () => {
