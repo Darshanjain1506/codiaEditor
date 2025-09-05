@@ -151,7 +151,7 @@ function ExportModal({ isOpen, onClose }) {
           <Button
             onClick={handleExport}
             disabled={isExporting}
-            className="min-w-[120px] bg-purple-700 text-white"
+            className="min-w-[120px] bg-green-700 text-white"
             variant="default"
           >
             {isExporting ? (

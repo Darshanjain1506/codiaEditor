@@ -1,18 +1,44 @@
 import { useEditorStore } from "@/store";
 import { shapeDefinitions } from "./shapes/shape-definitions";
 import { createShape } from "./shapes/shape-factory";
+import { loadGoogleFont } from "@/lib/utils";
 
 export const initializeFabric = async (canvasEl, containerEl) => {
   try {
-    const { Canvas, PencilBrush } = await import("fabric");
+    const { Canvas, PencilBrush, Object: FabricObject } = await import("fabric");
 
+    // 🔑 extend toObject only once
+    const extraProps = [
+      "id",
+      "filters",
+      "selectable",
+      "evented",
+      "hasControls",
+      "lockMovementX",
+      "lockMovementY",
+      "lockScalingX",
+      "lockScalingY",
+      "lockRotation",
+    ];
+
+    if (!(FabricObject)._extendedToObject) {
+      FabricObject.prototype.toObject = (function (toObject) {
+        return function (propertiesToInclude) {
+          return toObject.call(this, (propertiesToInclude || []).concat(extraProps));
+        };
+      })(FabricObject.prototype.toObject);
+
+      (FabricObject)._extendedToObject = true; // flag so it only patches once
+    }
+
+    // init canvas
     const canvas = new Canvas(canvasEl, {
       preserveObjectStacking: true,
       isDrawingMode: false,
       renderOnAddRemove: true,
     });
 
-    //drawing init
+    // drawing init
     const brush = new PencilBrush(canvas);
     brush.color = "#000000";
     brush.width = 5;
@@ -24,6 +50,7 @@ export const initializeFabric = async (canvasEl, containerEl) => {
     return null;
   }
 };
+
 
 export const centerCanvas = (canvas, showProperties = false, isEditing = false) => {
 
@@ -40,16 +67,45 @@ export const centerCanvas = (canvas, showProperties = false, isEditing = false) 
   canvasWrapper.style.transform = "translate(-50%, -50%)";
 };
 
-export const addShapeToCanvas = async (canvas, shapeType, customProps = {}) => {
+export const addShapeToCanvas = async (canvas, shapeType, customProps = {}, isFixed = false) => {
   if (!canvas) return null;
   try {
     const fabricModule = await import("fabric");
 
+    // Lock or keep movable based on `isFixed`
+    const interactiveProps = isFixed
+      ? {
+        selectable: false,
+        evented: false,
+        hasControls: false,
+        hasBorders: false,
+        lockMovementX: true,
+        lockMovementY: true,
+        lockScalingX: true,
+        lockScalingY: true,
+        lockRotation: true,
+        hoverCursor: 'default',
+        moveCursor: 'default',
+        perPixelTargetFind: false,
+      }
+      : {
+        selectable: true,
+        evented: true,
+        hasControls: true,
+        hasBorders: true,
+        lockMovementX: false,
+        lockMovementY: false,
+        lockScalingX: false,
+        lockScalingY: false,
+        lockRotation: false,
+      };
+
     const shape = createShape(fabricModule, shapeType, shapeDefinitions, {
       left: 100,
       top: 100,
-      ...customProps,
+      ...customProps, ...interactiveProps
     });
+
 
     if (shape) {
       shape.id = `${shapeType}-${Date.now()}`;
@@ -71,6 +127,24 @@ export const addTextToCanvas = async (
 
   try {
     const { IText } = await import("fabric");
+
+    let fontFamily = options.fontFamily || 'Arial';
+    console.log(options.fontFamily, "-----------------------");
+
+    if (fontFamily !== 'Arial' && fontFamily !== 'serif' && fontFamily !== 'sans-serif') {
+      try {
+
+        await loadGoogleFont(fontFamily);
+
+        // Small delay to ensure font is fully loaded
+        await new Promise(resolve => setTimeout(resolve, 100));
+      } catch (error) {
+        console.warn(`Font loading failed for ${fontFamily}, using fallback`);
+        fontFamily = 'Arial';
+      }
+    }
+
+
 
     const defaultProps = {
       left: 100,

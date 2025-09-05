@@ -193,4 +193,9 @@ export const fontFamilies = [
   "Verdana",
   "Impact",
   "Comic Sans MS",
+  "Trebuchet MS",
+  "Arial Black", "Palatino", "Garamond", "Bookman", "Tahoma",
+  "Lucida Console", "Monaco", "Consolas", "Andale Mono", "Open Sans", "Roboto", "Lato", "Montserrat", "Oswald",
+  "Source Sans Pro", "Raleway", "PT Sans", "Lora", "Ubuntu",
+  "Playfair Display", "Merriweather", "Nunito", "Poppins", "Inter"
 ];

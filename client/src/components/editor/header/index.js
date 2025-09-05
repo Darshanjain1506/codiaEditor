@@ -32,9 +32,13 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import ImageUploadModal from "../modal/ImageUploadModal";
+import { useParams } from "next/navigation";
 
 function Header({ imageCodiaJson,
   setImageCodiaJson }) {
+
+
+  const { token } = useParams()
   const {
     isEditing,
     setIsEditing,
@@ -47,6 +51,7 @@ function Header({ imageCodiaJson,
     userDesigns,
     userSubscription,
     setShowPremiumModal,
+    saveToServer
 
   } = useEditorStore();
   // const { data: session } = useSession();
@@ -84,13 +89,13 @@ function Header({ imageCodiaJson,
   return (
     <header className="header-gradient header flex items-center justify-end px-4 h-14">
       <div className="flex items-center  space-x-2">
-        <button
+        {/* <button
           onClick={() => setIsUploadOpen(true)}
           className="header-button ml-3 relative"
           title="Upload"
         >
           <FilePlus className="w-5 h-5" />
-        </button>
+        </button> */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild="true">
             <button className="header-button flex items-center text-white">
@@ -113,6 +118,7 @@ function Header({ imageCodiaJson,
           className={
             "relative flex items-center justify-center p-1.5 rounded-md hover:bg-muted transition-colors"
           }
+          onClick={() => saveToServer(token)}
           title={saveStatus !== "Saving..." ? "Save" : saveStatus}
           disabled={saveStatus === "Saving..."}
         >

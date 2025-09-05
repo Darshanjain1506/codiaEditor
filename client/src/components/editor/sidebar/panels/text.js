@@ -25,7 +25,7 @@ function TextPanel() {
       <div className="p-4 space-y-4">
         <Button
           onClick={handleAddCustomTextBox}
-          className="w-full py-3 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-md flex items-center justify-center transition-colors"
+          className="w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-md flex items-center justify-center transition-colors"
         >
           <Type className="mr-2 h-5 w-5" />
           <span className="font-medium">Add a text box</span>

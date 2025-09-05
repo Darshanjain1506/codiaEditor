@@ -42,24 +42,24 @@ function Sidebar() {
       label: "Uploads",
       panel: () => <UploadPanel />,
     },
-    {
-      id: "draw",
-      icon: Pencil,
-      label: "Draw",
-      panel: () => <DrawingPanel />,
-    },
-    {
-      id: "ai",
-      icon: Sparkle,
-      label: "AI",
-      panel: () => <AiPanel />,
-    },
-    {
-      id: "settings",
-      icon: Settings,
-      label: "Settings",
-      panel: () => <SettingsPanel />,
-    },
+    // {
+    //   id: "draw",
+    //   icon: Pencil,
+    //   label: "Draw",
+    //   panel: () => <DrawingPanel />,
+    // },
+    // {
+    //   id: "ai",
+    //   icon: Sparkle,
+    //   label: "AI",
+    //   panel: () => <AiPanel />,
+    // },
+    // {
+    //   id: "settings",
+    //   icon: Settings,
+    //   label: "Settings",
+    //   panel: () => <SettingsPanel />,
+    // },
   ];
 
   const handleItemClick = (id) => {

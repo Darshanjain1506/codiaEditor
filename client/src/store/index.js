@@ -47,17 +47,17 @@ export const useEditorStore = create((set, get) => ({
     }
   },
 
-  saveToServer: async () => {
-    const designId = get().designId;
+  saveToServer: async (token) => {
+    // const designId = get().designId;
     const canvas = get().canvas;
 
-    if (!canvas || !designId) {
-      console.log("No design ID Available or canvas instance is not available");
+    if (!canvas) {
+      console.log("No  canvas instance is not available");
       return null;
     }
 
     try {
-      const savedDesign = await saveCanvasState(canvas, designId, get().name);
+      const savedDesign = await saveCanvasState(canvas, token, get().name);
 
       set({
         saveStatus: "Saved",

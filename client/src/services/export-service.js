@@ -31,6 +31,9 @@ export function exportAsPng(canvas, fileName = "PNG FileName", options = {}) {
     const dataURL = canvas.toDataURL(defaultOptions);
 
     saveAs(dataURL, `${fileName}.png`);
+
+
+
   } catch (e) {
     return false;
   }

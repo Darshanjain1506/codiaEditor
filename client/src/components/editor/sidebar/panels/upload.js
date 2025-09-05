@@ -3,7 +3,6 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { addImageToCanvas } from "@/fabric/fabric-utils";
-import { fetchWithAuth } from "@/services/base-service";
 import { uploadFileWithAuth } from "@/services/upload-service";
 import { useEditorStore } from "@/store";
 import { Loader2, Upload } from "lucide-react";
@@ -17,26 +16,7 @@ function UploadPanel() {
   const [isLoading, setIsLoading] = useState(false);
   const [userUploads, setUserUploads] = useState([]);
 
-  // const { data: session, status } = useSession();
 
-  const fetchUserUploads = useCallback(async () => {
-    // if (status !== "authenticated" || !session?.idToken) return;
-
-    try {
-      setIsLoading(true);
-      const data = await fetchWithAuth("/v1/media/get");
-      console.log(data, "fetchUserUploads");
-      setUserUploads(data?.data || []);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  // useEffect(() => {
-  //   if (status === "authenticated") fetchUserUploads();
-  // }, [status, fetchUserUploads]);
 
   const handleFileUpload = async (e) => {
     console.log(e.target.files);
@@ -73,7 +53,7 @@ function UploadPanel() {
       <div className="p-4 space-y-4">
         <div className="flex gap-2">
           <Label
-            className={`w-full flex items-center justify-center gap-2 py-3 px-4 bg-purple-600 hover:bg-purple-700 text-white
+            className={`w-full flex items-center justify-center gap-2 py-3 px-4 bg-green-600 hover:bg-green-700 text-white
           rounded-md cursor-pointer h-12 font-medium transition-colors ${isUploading ? "opacity-70 cursor-not-allowed" : ""
               }
           `}
