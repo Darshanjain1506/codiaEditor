@@ -116,7 +116,7 @@ function Header({ imageCodiaJson,
         </DropdownMenu>
         <button
           className={
-            "relative flex items-center justify-center p-1.5 rounded-md hover:bg-muted transition-colors"
+            "relative flex items-center justify-center p-1.5  header-button"
           }
           onClick={() => saveToServer(token)}
           title={saveStatus !== "Saving..." ? "Save" : saveStatus}

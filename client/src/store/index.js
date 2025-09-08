@@ -48,7 +48,10 @@ export const useEditorStore = create((set, get) => ({
   },
 
   saveToServer: async (token) => {
-    // const designId = get().designId;
+    if (get().saveStatus === "Saving...") {
+      return;
+    }
+    set({ saveStatus: "Saving..." });
     const canvas = get().canvas;
 
     if (!canvas) {
@@ -60,7 +63,7 @@ export const useEditorStore = create((set, get) => ({
       const savedDesign = await saveCanvasState(canvas, token, get().name);
 
       set({
-        saveStatus: "Saved",
+        saveStatus: "Saved...",
         isModified: false,
       });
 

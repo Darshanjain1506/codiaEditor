@@ -12,6 +12,7 @@ import { addImageToCanvas, addShapeToCanvas, addTextToCanvas, centerCanvas } fro
 import { rgbToHex } from "@/lib/utils";
 import axios from "axios";
 import DesignLoadingComponent from "./loading/DesignLoadingComponent"; // Import the loading component
+import DesignSavingComponent from "./loading/DesignSavingComponent";
 
 function MainEditor() {
   const params = useParams();
@@ -36,6 +37,7 @@ function MainEditor() {
     setName,
     setShowProperties,
     showProperties,
+    saveStatus,
     isEditing,
   } = useEditorStore();
 
@@ -448,6 +450,7 @@ function MainEditor() {
       </div>
       {showProperties && isEditing && <Properties />}
       {loadingStage !== "success" && <DesignLoadingComponent />}
+      {(saveStatus === "Saving..." || saveStatus === "Saved...") && <DesignSavingComponent />}
     </div>
   );
 }
