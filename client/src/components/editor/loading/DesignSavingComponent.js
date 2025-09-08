@@ -2,7 +2,7 @@ import { useEditorStore } from "@/store";
 import React, { useEffect, useState } from "react";
 import { Check, Download, Loader2 } from "lucide-react";
 import ExportModal from "../export";
-import { exportAsJson } from "@/services/export-service";
+import { exportAsJson, exportAsPng } from "@/services/export-service";
 import { Button } from "@/components/ui/button";
 
 const DesignSavingComponent = () => {
@@ -25,7 +25,7 @@ const DesignSavingComponent = () => {
 
         try {
             let successFlag = false;
-            successFlag = exportAsJson(canvas, "JSON FileName");
+            successFlag = exportAsPng(canvas, "PNG FileName");
 
 
 
