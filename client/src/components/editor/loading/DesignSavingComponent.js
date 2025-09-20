@@ -19,6 +19,18 @@ const DesignSavingComponent = () => {
 
     }, [saveStatus]);
 
+    useEffect(() => {
+        if (saveStatus === "Saved...") {
+            window.opener.postMessage({ type: "edit:done" }, "*");
+            const timer = setTimeout(() => {
+                window.close();
+
+            }, 1200); // delay so user sees "Saved" checkmark
+            return () => clearTimeout(timer);
+        }
+    }, [saveStatus]);
+
+
     const handleExport = async () => {
         if (!canvas) return;
         setIsExporting(true);
@@ -83,7 +95,7 @@ const DesignSavingComponent = () => {
                             <h2 className="text-xl font-semibold text-gray-800 mb-2">
                                 Design Saved
                             </h2>
-                            <div>
+                            {/*   <div>
                                 <Button
                                     onClick={handleExport}
                                     disabled={isExporting}
@@ -102,7 +114,8 @@ const DesignSavingComponent = () => {
                                         </>
                                     )}
                                 </Button>
-                            </div>
+                            </div> */}
+
                         </div>
                     )}
 

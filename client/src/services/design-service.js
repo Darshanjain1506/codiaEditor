@@ -2482,7 +2482,7 @@ export async function saveCanvasState(
     const formData = new FormData();
     formData.append("file", file);
     formData.append("designJson", JSON.stringify(designData));
-    const response = await axios.post(`http://20.244.45.157:4001/api/v1/editor/save`, formData, {
+    const response = await axios.post(`http://localhost:4001/api/v1/editor/save`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",

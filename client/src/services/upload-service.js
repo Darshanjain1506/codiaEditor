@@ -2,7 +2,7 @@ import axios from "axios";
 import { getSession } from "next-auth/react";
 import { fetchWithAuth } from "./base-service";
 
-const API_URL = "https://cyringe.dwebbox.com/api/v1";
+const API_URL = process.env.API_URL || "http://localhost:5000";
 
 export async function uploadFileWithAuth(file, metaData = {}) {
 

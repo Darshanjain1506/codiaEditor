@@ -364,7 +364,7 @@ function MainEditor() {
       setLoadingStage("Fetching Design Data");
       if (!token) return;
 
-      const res = await axios.get("http://20.244.45.157:4001/api/v1/editor/get", {
+      const res = await axios.get("http://localhost:4001/api/v1/editor/get", {
         headers: { Authorization: `Bearer ${token}` }
       });
 
